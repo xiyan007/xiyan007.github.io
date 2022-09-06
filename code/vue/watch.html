@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>watch</title>
+  </head>
+  <body>
+    <div class="box">
+      <div>
+        <span :style="{ color }">{{count}}</span>
+        <button @click="count++">加</button>
+        <button @click="count--">减</button>
+      </div>
+    </div>
+
+    <script src="/resources/lib/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: '.box',
+        data: {
+          count: 0,
+          color: '#000',
+        },
+        watch: {
+          count: function (current) {
+            if (current < 0) {
+              this.color = 'red';
+            } else if (current == 0) {
+              this.color = '#000';
+            } else {
+              this.color = 'blue';
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,2003 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>React 知识点 - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6b80c2a2.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra/index.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#react" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              React 知识点
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          HTML + CSS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HTML + CSS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          HTML + CSS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%20%2B%20CSS/" class="md-nav__link">
+        HTML + CSS 基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%20%2B%20CSS/flex/" class="md-nav__link">
+        Flex Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%20%2B%20CSS/grid/" class="md-nav__link">
+        Grid Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%20%2B%20CSS/practice/" class="md-nav__link">
+        HTML + CSS 应用
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%20%2B%20CSS/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" class="md-nav__link">
+        响应式布局
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          JavaScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="JavaScript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          JavaScript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JavaScript/" class="md-nav__link">
+        JavaScript 基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JavaScript/advancement/" class="md-nav__link">
+        JavaScript 进阶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JavaScript/es6/" class="md-nav__link">
+        ES6+ 新增特性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JavaScript/practice/" class="md-nav__link">
+        JavaScript 应用
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          React
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="React" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          React
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          React 知识点
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        React 知识点
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jsx" class="md-nav__link">
+    JSX 是什么
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#props" class="md-nav__link">
+    组件和 props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setstate" class="md-nav__link">
+    setState
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    单向数据流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    生命周期
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    事件处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    合成事件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react_1" class="md-nav__link">
+    React 事件机制 ❓
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react-key" class="md-nav__link">
+    React 中 key 的作用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    Context
+  </a>
+  
+    <nav class="md-nav" aria-label="Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context_1" class="md-nav__link">
+    何时使用 Context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactcreatecontext" class="md-nav__link">
+    React.createContext
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contextprovider" class="md-nav__link">
+    Context.Provider
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classcontexttype" class="md-nav__link">
+    Class.contextType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contextconsumer" class="md-nav__link">
+    Context.Consumer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contextdisplayname" class="md-nav__link">
+    Context.displayName
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refs" class="md-nav__link">
+    Refs
+  </a>
+  
+    <nav class="md-nav" aria-label="Refs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refs_1" class="md-nav__link">
+    何时使用 Refs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refs_2" class="md-nav__link">
+    创建 Refs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refs_3" class="md-nav__link">
+    访问 Refs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refs_4" class="md-nav__link">
+    回调 Refs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forwarding-refs" class="md-nav__link">
+    Forwarding Refs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fragments" class="md-nav__link">
+    Fragments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hoc" class="md-nav__link">
+    高阶组件(HOC)
+  </a>
+  
+    <nav class="md-nav" aria-label="高阶组件(HOC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    高阶组件产生的意义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    使用高阶组件注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    高阶组件的应用场景
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dom" class="md-nav__link">
+    虚拟 DOM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    函数组件和类组件的区别 ❓
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactpurecomponent-reactcomponent" class="md-nav__link">
+    React.PureComponent 和 React.Component 的区别 ❓
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hooks/" class="md-nav__link">
+        React Hooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="redux/" class="md-nav__link">
+        Redux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        React 常见题
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          React Native
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="React Native" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          React Native
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React%20Native/" class="md-nav__link">
+        React Native
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Vue
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vue" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Vue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/" class="md-nav__link">
+        Vue 知识点
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/vue-router/" class="md-nav__link">
+        Vue Router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/vuex/" class="md-nav__link">
+        Vuex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        Vue 生态圈
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        Vue 常见问题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/%E6%B7%B1%E5%85%A5%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/" class="md-nav__link">
+        深入响应式原理
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Web APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web APIs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Web APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%20APIs/XMLHttpRequest/" class="md-nav__link">
+        XMLHttpRequest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%20APIs/touch%20events/" class="md-nav__link">
+        Touch Events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%20APIs/window/" class="md-nav__link">
+        Window
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Node.js
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node.js" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Node.js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node.js/" class="md-nav__link">
+        Node.JS 知识点
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          其他
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="其他" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          其他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        知识点集合
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/Electron/" class="md-nav__link">
+        Electron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/webpack/" class="md-nav__link">
+        webpack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/%E6%A1%86%E6%9E%B6/" class="md-nav__link">
+        框架
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        算法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jsx" class="md-nav__link">
+    JSX 是什么
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#props" class="md-nav__link">
+    组件和 props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setstate" class="md-nav__link">
+    setState
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    单向数据流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    生命周期
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    事件处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    合成事件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react_1" class="md-nav__link">
+    React 事件机制 ❓
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react-key" class="md-nav__link">
+    React 中 key 的作用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    Context
+  </a>
+  
+    <nav class="md-nav" aria-label="Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context_1" class="md-nav__link">
+    何时使用 Context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactcreatecontext" class="md-nav__link">
+    React.createContext
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contextprovider" class="md-nav__link">
+    Context.Provider
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classcontexttype" class="md-nav__link">
+    Class.contextType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contextconsumer" class="md-nav__link">
+    Context.Consumer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contextdisplayname" class="md-nav__link">
+    Context.displayName
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refs" class="md-nav__link">
+    Refs
+  </a>
+  
+    <nav class="md-nav" aria-label="Refs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refs_1" class="md-nav__link">
+    何时使用 Refs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refs_2" class="md-nav__link">
+    创建 Refs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refs_3" class="md-nav__link">
+    访问 Refs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refs_4" class="md-nav__link">
+    回调 Refs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forwarding-refs" class="md-nav__link">
+    Forwarding Refs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fragments" class="md-nav__link">
+    Fragments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hoc" class="md-nav__link">
+    高阶组件(HOC)
+  </a>
+  
+    <nav class="md-nav" aria-label="高阶组件(HOC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    高阶组件产生的意义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    使用高阶组件注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    高阶组件的应用场景
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dom" class="md-nav__link">
+    虚拟 DOM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    函数组件和类组件的区别 ❓
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactpurecomponent-reactcomponent" class="md-nav__link">
+    React.PureComponent 和 React.Component 的区别 ❓
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="react">React 知识点</h1>
+<h2 id="jsx">JSX 是什么</h2>
+<p>JSX 是一个JavaScript 的语法扩展。</br>
+JSX 也是一个表达式，在编译之后，JSX 表达式会被转为普通 JavaScript 函数调用，并且对其取值，得到 JavaScript 对象。</p>
+<p><strong>JSX 防止注入攻击</strong></p>
+<p>React DOM 在渲染所有输入内容之前，默认会进行转义。它可以确保在你的应用中，永远不会注入那些并非自己明确编写的内容。所有的内容在渲染之前都被转换成了字符串。这样可以有效地防止 XSS（cross-site-scripting, 跨站脚本）攻击。</p>
+<h2 id="props">组件和 props</h2>
+<p>组件可以让我们将 UI 拆分成独立的、可复用的片段。</p>
+<p><strong>Props 是只读的</strong></p>
+<p>组件无论是使用函数声明还是通过 class 声明，都决不能修改自身的 props。</p>
+<p>所有 React 组件都必须像纯函数一样保护它们的 props 不被更改。</p>
+<h2 id="setstate">setState</h2>
+<p>state 是组件内部状态，是私有的，除了拥有并设置它的组件，其他组件无法访问。</br>
+不能直接修改 state 的值，而要使用 setState() 方法进行更新。</p>
+<p><strong>state 更新是异步的</strong></p>
+<p>setState() 会将组件的更改排入队列，不会立即更新组件，会批量推迟更新。出于性能考虑，React 可能会把多个 setState() 调用合并成一个调用。</p>
+<p>因为 this.props 和 this.state 可能会异步更新，所以你不要依赖他们的值来更新下一个状态。
+要解决这个问题，可以让 setState() 接收一个函数而不是一个对象。这个函数用上一个 state 作为第一个参数，将此次更新被应用时的 props 做为第二个参数：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">((</span><span class="nx">state</span><span class="p">,</span> <span class="nx">props</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">counter</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">counter</span> <span class="o">+</span> <span class="nx">props</span><span class="p">.</span><span class="nx">incrementß</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+<p><strong>state 更新会被合并</strong></p>
+<p>当你调用 setState() 的时候，React 会把你提供的对象合并到当前的 state。 相当于调用<code>Object.assign()</code>方法，后调用的 SetState() 将覆盖通一周期内的setState的值。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span> 
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;开始调用&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="p">);</span> 
+  <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="nx">count</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">+</span> <span class="mf">1</span><span class="p">},()</span> <span class="p">=&gt;</span> <span class="p">{</span> 
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;count1&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="p">);</span> 
+  <span class="p">});</span> 
+  <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">count</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">+</span> <span class="mf">1</span><span class="p">},()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;count2&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="p">);</span> 
+  <span class="p">});</span> 
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;结束调用&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="p">);</span> 
+<span class="p">}</span>
+
+<span class="c1">// 打印结果：</span>
+<span class="c1">// 开始调用 0</span>
+<span class="c1">// 结束调用 0</span>
+<span class="c1">// count1 1</span>
+<span class="c1">// count2 1</span>
+</code></pre></div>
+</td></tr></table>
+<p>两次SetState调用，相当于：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span>
+  <span class="nx">previousState</span><span class="p">,</span> 
+  <span class="p">{</span> <span class="nx">count</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">+</span> <span class="mf">1</span> <span class="p">},</span> 
+  <span class="p">{</span> <span class="nx">count</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">+</span> <span class="mf">1</span> <span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>参考：</p>
+<ul>
+<li><a href="https://zh-hans.reactjs.org/docs/state-and-lifecycle.html">State &amp; 生命周期</a></li>
+<li><a href="https://zh-hans.reactjs.org/docs/react-component.html">React.Component</a></li>
+<li><a href="https://www.studyfe.cn/2019/10/09/react/library-react-state/#toc-heading-7">React 原理之 setState 执行机制</a></li>
+</ul>
+<h2 id="_1">单向数据流</h2>
+<p><strong>React 中数据是向下流动的，数据的流向只能通过 props 由外层向内层一层层传递。</strong></p>
+<ul>
+<li>props 是只读的，组件不能修改自身接收的 props</li>
+<li>state 是组件的内部状态，除了拥有并设置它的组件，其他组件无法访问</li>
+<li>组件可以选择 state 作为 props 向下传递到它的子组件中</li>
+<li>从 state 派生出来的任何数据只能影响到书中“低于”它们的组件</li>
+</ul>
+<h2 id="_2">生命周期</h2>
+<p>生命周期指的是组件从创建到卸载的整个过程，每个过程都有它对应的函数被调用，它有以下几个阶段：</p>
+<ul>
+<li>挂载阶段：组件实例被创建并插入 DOM 中时</li>
+<li>更新阶段：组件的 props 或 state 发生变化时会触发更新</li>
+<li>卸载阶段：组件从 DOM 中移除时</li>
+<li>错误处理：渲染过程，生命周期，或子组件的构造函数中抛出错误时</li>
+</ul>
+<p>不同阶段函数调用：</p>
+<p><strong>Mounting</strong></p>
+<ul>
+<li>constructor(props)</br>
+  初始化state，绑定 event handler 方法到实例。</li>
+<li>static getDerivedStateFromProps(props, state)</br>
+  使组件接收的参数能够更新内部的 state。
+  此方法在初始挂载和后续更新的时候调用，返回一个对象来更新 state, state 无需更新则返回 null。</li>
+<li>render(）</br></li>
+<li>componentDidMount()</br>
+  组件挂载后立即调用，这个方法是设置订阅的好地方。</li>
+</ul>
+<p><strong>Updating</strong></p>
+<ul>
+<li>static getDerivedStateFromProps(props, state)</li>
+<li>shouldComponentUpdate(nextProps, nextState)</br>
+  使用这个方法可以让 react 知道组件的输出是否受当前 state 或 props 变化的影响。</br>
+  当接收到新的 props 和 state 时，在渲染前调用，默认返回 true。</br>
+  当返回为 false 时，UNSAFE_componentWillUpdate()、render() 和 componentDidUpdate() 不会被调用。</li>
+<li>render()</li>
+<li>getSnapshotBeforeUpdate(preProps, preState)</br>
+  此方法在 React 对视图做出实际改动前发生调用，例如 DOM 更新，返回值将作为 componentDidUpdate 的第三个参数。</li>
+<li>componentDidUpdate(preProps, preState, snapshot)</li>
+</ul>
+<p><strong>Unmounting</strong></p>
+<ul>
+<li>componentWillUnmount() </li>
+</ul>
+<p><strong>Error Handling</strong></p>
+<p>在渲染期间，生命周期方法里，或者任何子组件的构造函数里出现错误，会调用下列方法：</p>
+<ul>
+<li>static getDerivedStateFromError()</li>
+<li>componentDidCatch()</li>
+</ul>
+<p><strong>遗留的生命周期方法</strong></p>
+<ul>
+<li>UNSAFE_componentWillMount</li>
+<li>UNSAFE_componentWillReceiveProps()</li>
+<li>UNSAFE_componentWillUpdate()</li>
+</ul>
+<p>参考：</p>
+<ul>
+<li><a href="https://reactjs.org/docs/react-component.html">React.Component</a></li>
+</ul>
+<h2 id="_3">事件处理</h2>
+<p>React 元素的<a href="https://zh-hans.reactjs.org/docs/handling-events.html">事件处理</a>和 DOM 元素的很相似，语法上有一点不同。</p>
+<ul>
+<li>React 事件命名采用小驼峰式，而不是纯小写</li>
+<li>使用 JSX 语法时需要传入一个函数作为事件处理函数，而不是一个字符串。</li>
+<li>在 React 中另一个不同点是你不能通过返回 false 的方式阻止默认行为，必须显式的使用 preventDefault</li>
+</ul>
+<h2 id="_4">合成事件</h2>
+<p>合成事件（<a href="https://zh-hans.reactjs.org/docs/events.html">SyntheticEvent</a>）是 React 模拟原生 DOM 事件所有能力的一个事件对象，是浏览器原生事件的跨浏览器包装器。除兼容所有浏览器外，它还拥有和浏览器原生事件相同的接口，包括 stopPropagation() 和 preventDefault()。</p>
+<p>当你需要使用浏览器的底层事件时，只需要使用 nativeEvent 属性来获取即可。合成事件与浏览器的原生事件不同，也不会直接映射到原生事件。</p>
+<p><strong>React合成事件与原生事件执行顺序</strong></p>
+<ul>
+<li>React 所有事件都挂载在 document 对象上</li>
+<li>当真实 DOM 元素触发事件，会冒泡到 document 对象后，再处理 React 事件</li>
+<li>所以会先执行原生事件，然后处理 React 事件</li>
+<li>最后真正执行 document 上挂载的事件</li>
+</ul>
+<p>参考：</p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/gKYU8rIXPM5qiItxuu_HMw">说说对React事件机制的理解</a></li>
+</ul>
+<h2 id="react_1">React 事件机制 ❓</h2>
+<p>React 基于浏览器的事件机制自身实现了一套事件机制，被称为<code>合成事件</code>，包括事件注册、事件的合成、事件冒泡等。</p>
+<p>合成事件是 React 模拟原生 DOM事件所有能力的一个事件对象，即浏览器原生事件的跨浏览器包装器。</p>
+<p>React 根据 W3C规范来定义合成事件，兼容所有浏览器，拥有与浏览器原生事件相同的接口。</p>
+<p>React 上注册的事件最终会绑定在 document 这个 DOM 上，而不是 React 组件对应的 DOM(减少内存开销就是因为所有的事件都绑定在 document 上，其他节点没有绑定事件)</p>
+<p>React 通过队列的形式，从触发的组件向父组件回溯，然后调用他们 JSX 中定义的事件处理程序。</p>
+<h2 id="react-key">React 中 key 的作用</h2>
+<p><a href="https://zh-hans.reactjs.org/docs/lists-and-keys.html#keys">key</a> 帮助 React 识别哪些元素改变了，比如被添加或删除。因此需要给数组中的每一个元素赋予一个确定的标识。</p>
+<p>一个元素的 key 最好是这个元素在列表中拥有的一个独一无二的字符串。通常，我们使用数据中的 id 来作为元素的 key。
+当元素没有确定 id 的时候，不得已情况下可以使用元素索引 index 作为 key。</p>
+<h2 id="context">Context</h2>
+<p><a href="https://zh-hans.reactjs.org/docs/context.html#when-to-use-context">Context</a> 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法。</p>
+<p>在一个典型的 React 应用中，数据是通过 props 属性自上而下（由父及子）进行传递的，这种用法对于某些类型的属性而言是极其繁琐的（例如：地区偏好，UI 主题），这些属性是应用程序中许多组件都需要的。Context 提供了一种在组件之间共享此类值的方式，而不必显式地通过组件树的逐层传递 props。</p>
+<h3 id="context_1">何时使用 Context</h3>
+<p>Context 设计目的是为了共享那些对于一个组件树而言是“全局”的数据，例如当前认证的用户、主题或首选语言。</p>
+<p>需要谨慎使用 Context，因为它会使组件的复用性变差。如果只是想避免层层传递一些属性，可以使用组件组合，有时候它是比 Context 更好的解决方案。</p>
+<h3 id="reactcreatecontext">React.createContext</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">MyContext</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createContext</span><span class="p">(</span><span class="nx">defaultValue</span><span class="p">)</span>
+
+<span class="o">&lt;</span><span class="nx">MyContext</span><span class="p">.</span><span class="nx">Provider</span> <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="cm">/* 某个值 */</span><span class="p">}</span><span class="o">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+<p>创建一个 Context 对象。当 React 渲染一个订阅了这个 Context 对象的组件，这个组件会从组件树中离自身最近的那个匹配的 Provider 中读取到当前的 context 值。</p>
+<p>只有当组件所处的树中没有匹配到 Provider 时，其 defaultValue 参数才会生效。此默认值有助于在不使用 Provider 包装组件的情况下对组件进行测试。注意：将 undefined 传递给 Provider 的 value 时，消费组件的 defaultValue 不会生效。</p>
+<h3 id="contextprovider">Context.Provider</h3>
+<p>每个 Context 对象都会返回一个 Provider React 组件，它允许消费组件订阅 context 的变化。</p>
+<p>Provider 接收一个 value 属性，传递给消费组件。一个 Provider 可以和多个消费组件有对应关系。多个 Provider 也可以嵌套使用，里层的会覆盖外层的数据。</p>
+<p>当 Provider 的 value 值发生变化时，它内部的所有消费组件都会重新渲染。从 Provider 到其内部 consumer 组件（包括 .contextType 和 useContext）的传播不受制于 shouldComponentUpdate 函数，因此当 consumer 组件在其祖先组件跳过更新的情况下也能更新。</p>
+<p>通过新旧值检测来确定变化，使用了与 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is#description">Object.is</a> 相同的算法。</p>
+<h3 id="classcontexttype">Class.contextType</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nx">MyClass</span> <span class="k">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">context</span><span class="p">;</span>
+    <span class="cm">/* 在组件挂载完成后，使用 MyContext 组件的值来执行一些有副作用的操作 */</span>
+  <span class="p">}</span>
+  <span class="nx">componentDidUpdate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">context</span><span class="p">;</span>
+    <span class="cm">/* ... */</span>
+  <span class="p">}</span>
+  <span class="nx">componentWillUnmount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">context</span><span class="p">;</span>
+    <span class="cm">/* ... */</span>
+  <span class="p">}</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">context</span><span class="p">;</span>
+    <span class="cm">/* 基于 MyContext 组件的值进行渲染 */</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">MyClass</span><span class="p">.</span><span class="nx">contextType</span> <span class="o">=</span> <span class="nx">MyContext</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<p>挂载在 class 上的 <code>contextType</code> 属性可以赋值为由 React.createContext() 创建的 Context 对象。此属性可以让你使用 <code>this.context</code> 来获取最近 Context 上的值。你可以在任何生命周期中访问到它，包括 render 函数中。</p>
+<h3 id="contextconsumer">Context.Consumer</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">MyContext</span><span class="p">.</span><span class="nx">Consumer</span><span class="o">&gt;</span>
+  <span class="p">{</span><span class="nx">value</span> <span class="p">=&gt;</span> <span class="cm">/* 基于 context 值进行渲染*/</span><span class="p">}</span>
+<span class="o">&lt;</span><span class="err">/MyContext.Consumer&gt;</span>
+</code></pre></div>
+</td></tr></table>
+<p>这种方法需要一个函数作为子元素（function as a child）。这个函数接收当前的 context 值，并返回一个 React 节点。传递给函数的 value 值等价于组件树上方离这个 context 最近的 Provider 提供的 value 值。如果没有对应的 Provider，value 参数等同于传递给 createContext() 的 defaultValue。</p>
+<h3 id="contextdisplayname">Context.displayName</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">MyContext</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createContext</span><span class="p">(</span><span class="cm">/* some value */</span><span class="p">);</span>
+<span class="nx">MyContext</span><span class="p">.</span><span class="nx">displayName</span> <span class="o">=</span> <span class="s1">&#39;MyDisplayName&#39;</span><span class="p">;</span>
+
+<span class="o">&lt;</span><span class="nx">MyContext</span><span class="p">.</span><span class="nx">Provider</span><span class="o">&gt;</span> <span class="c1">// &quot;MyDisplayName.Provider&quot; 在 DevTools 中</span>
+<span class="o">&lt;</span><span class="nx">MyContext</span><span class="p">.</span><span class="nx">Consumer</span><span class="o">&gt;</span> <span class="c1">// &quot;MyDisplayName.Consumer&quot; 在 DevTools 中</span>
+</code></pre></div>
+</td></tr></table>
+<p>context 对象接受一个名为 displayName 的 property，类型为字符串。React DevTools 使用该字符串来确定 context 要显示的内容。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://zh-hans.reactjs.org/docs/context.html">React Context</a></li>
+</ul>
+<h2 id="refs">Refs</h2>
+<p>Refs 提供了一种方式，允许我们访问 DOM 节点或在 render 方法中创建的 React 元素。</p>
+<h3 id="refs_1">何时使用 Refs</h3>
+<p>适合使用 refs 的情况：</p>
+<ul>
+<li>管理焦点，文本选择或媒体播放。</li>
+<li>触发强制动画。</li>
+<li>集成第三方 DOM 库。</li>
+</ul>
+<h3 id="refs_2">创建 Refs</h3>
+<p>Refs 是使用 React.createRef() 创建的，并通过 ref 属性附加到 React 元素。在构造组件时，通常将 Refs 分配给实例属性，以便可以在整个组件中引用它们。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nx">MyComponent</span> <span class="k">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">myRef</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createRef</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">myRef</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="refs_3">访问 Refs</h3>
+<p>当 ref 被传递给 render 中的元素时，对该节点的引用可以在 ref 的 current 属性中被访问。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">node</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">myRef</span><span class="p">.</span><span class="nx">current</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<p>ref 的值根据节点的类型而有所不同：</p>
+<ul>
+<li>当 ref 属性用于 HTML 元素时，构造函数中使用 React.createRef() 创建的 ref 接收底层 DOM 元素作为其 current 属性。</li>
+<li>当 ref 属性用于自定义 class 组件时，ref 对象接收组件的挂载实例作为其 current 属性。</li>
+<li>你不能在函数组件上使用 ref 属性，因为他们没有实例。</li>
+</ul>
+<h3 id="refs_4">回调 Refs</h3>
+<p>React 也支持另一种设置 refs 的方式，称为“回调 refs”。它可以更好地控制何时 refs 被设置和解除。</p>
+<p>传递给 ref 属性一个函数，这个函数中接受 React 组件实例或 HTML DOM 元素作为参数，以使它们能在其他地方被存储和访问。</p>
+<p>React 将在组件挂载时，会调用 ref 回调函数并传入 DOM 元素，当卸载时调用它并传入 null。在 componentDidMount 或 componentDidUpdate 触发前，React 会保证 refs 一定是最新的。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://zh-hans.reactjs.org/docs/refs-and-the-dom.html">Refs and the DOM</a></li>
+</ul>
+<h2 id="forwarding-refs">Forwarding Refs</h2>
+<p>Refs 转发是一种自动将 ref 从组件传递给它的子组件的技术。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">FancyButton</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">forwardRef</span><span class="p">((</span><span class="nx">props</span><span class="p">,</span> <span class="nx">ref</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">ref</span><span class="p">}</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;FancyButton&quot;</span><span class="o">&gt;</span>
+    <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">children</span><span class="p">}</span>
+  <span class="o">&lt;</span><span class="err">/button&gt;</span>
+<span class="p">));</span>
+
+<span class="c1">// 你可以直接获取 DOM button 的 ref：</span>
+<span class="kd">const</span> <span class="nx">ref</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createRef</span><span class="p">();</span>
+<span class="o">&lt;</span><span class="nx">FancyButton</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">ref</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">me</span><span class="o">!&lt;</span><span class="err">/FancyButton&gt;;</span>
+</code></pre></div>
+</td></tr></table>
+<p>以下是对上述示例发生情况的逐步解释：</p>
+<ol>
+<li>我们通过调用 React.createRef 创建了一个 React ref 并将其赋值给 ref 变量。</li>
+<li>我们通过指定 ref 为 JSX 属性，将其向下传递给 <FancyButton ref={ref}>。</li>
+<li>React 传递 ref 给 forwardRef 内函数 (props, ref) =&gt; ...，作为其第二个参数。</li>
+<li>我们向下转发该 ref 参数到 <button ref={ref}>，将其指定为 JSX 属性。</li>
+<li>当 ref 挂载完成，ref.current 将指向 <button> DOM 节点。</li>
+</ol>
+<p>使用场景：</p>
+<p>比如子组件中使用了第三方库(图片标注中使用的react slick库)，某些操作需要父组件调用第三方库的API时，可以在父组件创建 Ref，通过 React.forwardRef 将创建的 ref 传递到子组件，赋值给第三方库创建的React 元素。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://reactjs.org/docs/forwarding-refs.html">Forwarding Refs</a></li>
+</ul>
+<h2 id="fragments">Fragments</h2>
+<p>React 中的一个常见模式是一个组件返回多个元素。Fragments 允许我们将子列表分组，而无需向 DOM 添加额外节点。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">Fragment</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ChildA</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ChildB</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ChildC</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/React.Fragment&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p><strong>短语法</strong></p>
+<p>可以像使用任何其他元素一样使用 <code>&lt;&gt;</code>，它不支持key或属性，看起来像空标签。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ChildA</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ChildB</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ChildC</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>参考：</p>
+<ul>
+<li><a href="https://zh-hans.reactjs.org/docs/fragments.html">Fragments</a></li>
+</ul>
+<h2 id="hoc">高阶组件(HOC)</h2>
+<p>高阶组件(HOC)是 React中用于复用组件逻辑的一种高级技术。它本身不是 React API 的一部分，而是从 React 的组合特性中出现的一种模式。</p>
+<p><strong>高阶组件是参数为组件，返回值为新组件的函数。</strong></p>
+<h3 id="_5">高阶组件产生的意义</h3>
+<ol>
+<li>复用逻辑</li>
+<li>强化 props</li>
+<li>赋能组件</li>
+<li>控制渲染</li>
+</ol>
+<h3 id="_6">使用高阶组件注意事项</h3>
+<ol>
+<li>
+<p>不要在 render 方法中使用 HOC</p>
+<p>React 的 diff 算法（称为协调）使用组件标识来确定它是应该更新现有子树还是将其丢弃并挂载新子树。</br>
+如果在组件之外创建 HOC，组件只会被创建一次。如果在 render 方法中使用 HOC，每次调用 render 函数都会创建一个新的组件，重新挂载组件会导致该组件及其所有子组件的状态丢失。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// 每次调用 render 函数都会创建一个新的 EnhancedComponent</span>
+  <span class="c1">// EnhancedComponent1 !== EnhancedComponent2</span>
+  <span class="kd">const</span> <span class="nx">EnhancedComponent</span> <span class="o">=</span> <span class="nx">enhance</span><span class="p">(</span><span class="nx">MyComponent</span><span class="p">);</span>
+  <span class="c1">// 这将导致子树每次渲染都会进行卸载，和重新挂载的操作！</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">EnhancedComponent</span> <span class="o">/&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>必须复制静态方法</p>
+<p>将 HOC 应用于组件时，原始组件将使用容器组件进行包装，返回的新组件会丢失原始组件中的静态方法。为了解决这个问题，可以在返回之前，把静态方法拷贝到容器组件上。</p>
+<p>可以使用 <a href="https://github.com/mridgway/hoist-non-react-statics">hoist-non-react-statics</a> 自动拷贝所有非 React 静态方法，也可以在导出组件的时候，额外导出静态方法。</p>
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">静态方法丢失</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// 定义静态函数</span>
+<span class="nx">WrappedComponent</span><span class="p">.</span><span class="nx">staticMethod</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="cm">/*...*/</span><span class="p">}</span>
+<span class="c1">// 现在使用 HOC</span>
+<span class="kd">const</span> <span class="nx">EnhancedComponent</span> <span class="o">=</span> <span class="nx">enhance</span><span class="p">(</span><span class="nx">WrappedComponent</span><span class="p">);</span>
+
+<span class="c1">// 增强组件没有 staticMethod</span>
+<span class="k">typeof</span> <span class="nx">EnhancedComponent</span><span class="p">.</span><span class="nx">staticMethod</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span> <span class="c1">// true</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">手动拷贝静态方法</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// 手动拷贝需要清楚知道哪些方法应该被拷贝</span>
+<span class="kd">function</span> <span class="nx">enhance</span><span class="p">(</span><span class="nx">WrappedComponent</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">class</span> <span class="nx">Enhance</span> <span class="k">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span><span class="cm">/*...*/</span><span class="p">}</span>
+  <span class="c1">// 必须准确知道应该拷贝哪些方法 :(</span>
+  <span class="nx">Enhance</span><span class="p">.</span><span class="nx">staticMethod</span> <span class="o">=</span> <span class="nx">WrappedComponent</span><span class="p">.</span><span class="nx">staticMethod</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">Enhance</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">hoist-non-react-statics</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">hoistNonReactStatic</span> <span class="nx">from</span> <span class="s1">&#39;hoist-non-react-statics&#39;</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">enhance</span><span class="p">(</span><span class="nx">WrappedComponent</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">class</span> <span class="nx">Enhance</span> <span class="k">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span><span class="cm">/*...*/</span><span class="p">}</span>
+  <span class="nx">hoistNonReactStatic</span><span class="p">(</span><span class="nx">Enhance</span><span class="p">,</span> <span class="nx">WrappedComponent</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">Enhance</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">额外导出静态方法</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// 使用这种方式代替...</span>
+<span class="nx">MyComponent</span><span class="p">.</span><span class="nx">someFunction</span> <span class="o">=</span> <span class="nx">someFunction</span><span class="p">;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="nx">MyComponent</span><span class="p">;</span>
+
+<span class="c1">// ...单独导出该方法...</span>
+<span class="k">export</span> <span class="p">{</span> <span class="nx">someFunction</span> <span class="p">};</span>
+
+<span class="c1">// ...并在要使用的组件中，import 它们</span>
+<span class="k">import</span> <span class="nx">MyComponent</span><span class="p">,</span> <span class="p">{</span> <span class="nx">someFunction</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./MyComponent.js&#39;</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+</li>
+<li>
+<p>Refs 不会被传递</p>
+<p>虽然高阶组件的约定是将所有 props 传递给被包装组件，但这对于 refs 并不适用。那是因为 ref 实际上并不是一个 prop - 就像 key 一样，它是由 React 专门处理的。如果将 ref 添加到 HOC 的返回组件中，则 ref 引用指向容器组件，而不是被包装组件。</p>
+<p>这个问题可以通过使用 <code>React.forwardRef</code> 解决。</p>
+</li>
+</ol>
+<h3 id="_7">高阶组件的应用场景</h3>
+<p>参考：</p>
+<ul>
+<li><a href="https://zh-hans.reactjs.org/docs/higher-order-components.html">高阶组件</a></li>
+<li><a href="https://juejin.cn/post/6940422320427106335#heading-9">高阶组件产生初衷</a></li>
+</ul>
+<h2 id="dom">虚拟 DOM</h2>
+<p>React会在内存中维护一个虚拟DOM树（js 对象），对这个树进行读或写，实际上是对虚拟DOM进行操作。当数据变化时，React会自动更新虚拟DOM，然后将新的虚拟DOM和旧的虚拟DOM进行对比，找到变更的部分，得出一个diff，然后将diff放到一个队列里，最终批量更新这些diff到DOM中。</p>
+<p>虚拟DOM的优缺点</p>
+<ul>
+<li>优点：最终表现在DOM上的修改只是变更的部分，可以保证非常高效的渲染。</li>
+<li>缺点：首次渲染大量DOM时，由于多了一层虚拟DOM的计算，会比innerHTML插入慢。</li>
+</ul>
+<h2 id="_8">函数组件和类组件的区别 ❓</h2>
+<h2 id="reactpurecomponent-reactcomponent">React.PureComponent 和 React.Component 的区别 ❓</h2>
+<p>React.PureComponent 实现了 shouldComponentUpdate 浅比较 props 和 state，React.Component 中 shouldComponentUpdate 默认返回 true，每次都会重新渲染，需要手动实现渲染控制逻辑。</p>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../JavaScript/practice/" class="md-footer__link md-footer__link--prev" aria-label="Previous: JavaScript 应用" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              JavaScript 应用
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="hooks/" class="md-footer__link md-footer__link--next" aria-label="Next: React Hooks" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              React Hooks
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand", "header.autohide", "content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.ecf98df9.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../extra/index.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1499 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>React 常见题 - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6b80c2a2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra/index.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#react" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              React 常见题
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          HTML + CSS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HTML + CSS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          HTML + CSS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML%20%2B%20CSS/" class="md-nav__link">
+        HTML + CSS 基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML%20%2B%20CSS/flex/" class="md-nav__link">
+        Flex Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML%20%2B%20CSS/grid/" class="md-nav__link">
+        Grid Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML%20%2B%20CSS/practice/" class="md-nav__link">
+        HTML + CSS 应用
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML%20%2B%20CSS/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" class="md-nav__link">
+        响应式布局
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          JavaScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="JavaScript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          JavaScript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/" class="md-nav__link">
+        JavaScript 基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/advancement/" class="md-nav__link">
+        JavaScript 进阶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/es6/" class="md-nav__link">
+        ES6+ 新增特性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/practice/" class="md-nav__link">
+        JavaScript 应用
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          React
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="React" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          React
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        React 知识点
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hooks/" class="md-nav__link">
+        React Hooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redux/" class="md-nav__link">
+        Redux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          React 常见题
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        React 常见题
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#react_1" class="md-nav__link">
+    React 事件机制
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reacthtml" class="md-nav__link">
+    React的事件和普通的HTML事件有什么不同？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactcomponent-reactpurecomponent" class="md-nav__link">
+    React.Component 和 React.PureComponent 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react_2" class="md-nav__link">
+    React 高阶组件是什么，适用什么场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactfragment" class="md-nav__link">
+    对React中Fragment的理解，它的使用场景是什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactrefs" class="md-nav__link">
+    React中refs的作用是什么？有哪些应用场景？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react-hook" class="md-nav__link">
+    React Hook 解决了什么问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    类组件与函数组件有什么异同？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setstate" class="md-nav__link">
+    setState 是同步还是异步？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactsetstate" class="md-nav__link">
+    React中的setState批量更新的过程是什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactsetstate_1" class="md-nav__link">
+    React中setState的第二个参数作用是什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactstateprops" class="md-nav__link">
+    React组件的state和props有什么区别？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react_3" class="md-nav__link">
+    React 的生命周期有哪些？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react16" class="md-nav__link">
+    React16 废弃了哪些生命周期？为什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单向数据流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dom" class="md-nav__link">
+    虚拟 DOM 的原理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    父子组件通信方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    跨级组件的通信方式？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    非嵌套关系组件的通信方式？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react-router" class="md-nav__link">
+    React-Router的路由有几种模式？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react-routerurl" class="md-nav__link">
+    React-Router如何获取URL的参数？
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          React Native
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="React Native" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          React Native
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../React%20Native/" class="md-nav__link">
+        React Native
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Vue
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vue" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Vue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue/" class="md-nav__link">
+        Vue 知识点
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue/vue-router/" class="md-nav__link">
+        Vue Router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue/vuex/" class="md-nav__link">
+        Vuex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue/%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        Vue 生态圈
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        Vue 常见问题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vue/%E6%B7%B1%E5%85%A5%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/" class="md-nav__link">
+        深入响应式原理
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Web APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web APIs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Web APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%20APIs/XMLHttpRequest/" class="md-nav__link">
+        XMLHttpRequest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%20APIs/touch%20events/" class="md-nav__link">
+        Touch Events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%20APIs/window/" class="md-nav__link">
+        Window
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Node.js
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node.js" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Node.js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../node.js/" class="md-nav__link">
+        Node.JS 知识点
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          其他
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="其他" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          其他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        知识点集合
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96/Electron/" class="md-nav__link">
+        Electron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96/webpack/" class="md-nav__link">
+        webpack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96/%E6%A1%86%E6%9E%B6/" class="md-nav__link">
+        框架
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        算法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#react_1" class="md-nav__link">
+    React 事件机制
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reacthtml" class="md-nav__link">
+    React的事件和普通的HTML事件有什么不同？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactcomponent-reactpurecomponent" class="md-nav__link">
+    React.Component 和 React.PureComponent 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react_2" class="md-nav__link">
+    React 高阶组件是什么，适用什么场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactfragment" class="md-nav__link">
+    对React中Fragment的理解，它的使用场景是什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactrefs" class="md-nav__link">
+    React中refs的作用是什么？有哪些应用场景？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react-hook" class="md-nav__link">
+    React Hook 解决了什么问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    类组件与函数组件有什么异同？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setstate" class="md-nav__link">
+    setState 是同步还是异步？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactsetstate" class="md-nav__link">
+    React中的setState批量更新的过程是什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactsetstate_1" class="md-nav__link">
+    React中setState的第二个参数作用是什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactstateprops" class="md-nav__link">
+    React组件的state和props有什么区别？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react_3" class="md-nav__link">
+    React 的生命周期有哪些？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react16" class="md-nav__link">
+    React16 废弃了哪些生命周期？为什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单向数据流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dom" class="md-nav__link">
+    虚拟 DOM 的原理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    父子组件通信方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    跨级组件的通信方式？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    非嵌套关系组件的通信方式？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react-router" class="md-nav__link">
+    React-Router的路由有几种模式？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react-routerurl" class="md-nav__link">
+    React-Router如何获取URL的参数？
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="react">React 常见题</h1>
+<h2 id="react_1">React 事件机制</h2>
+<p>React 注册的所有事件是绑定到 document DOM 上，而不是 react 元素对应的 DOM 上。当事件发生并且冒泡到document处的时候，React将事件内容封装并交由真正的处理函数运行。这样的方式不仅减少了内存的消耗，还能在组件挂载销毁时统一订阅和移除事件。</p>
+<p>除此之外，冒泡到document上的事件也不是原生的浏览器事件，而是由react自己实现的合成事件（SyntheticEvent）。因此如果不想要是事件冒泡的话应该调用event.preventDefault()方法，而不是调用event.stopProppagation()方法</p>
+<h2 id="reacthtml">React的事件和普通的HTML事件有什么不同？</h2>
+<ul>
+<li>对于事件名称命名方式，原生事件为全小写，react 事件采用小驼峰；</li>
+<li>对于事件函数处理语法，原生事件为字符串，react 事件为函数；</li>
+<li>react 事件不能采用 return false 的方式来阻止浏览器的默认行为，而必须要地明确地调用preventDefault()来阻止默认行为。</li>
+</ul>
+<h2 id="reactcomponent-reactpurecomponent">React.Component 和 React.PureComponent 的区别</h2>
+<p>PureComponent表示一个纯组件，可以用来优化React程序，减少render函数执行的次数，从而提高组件的性能。</p>
+<p>在React中，当prop或者state发生变化时，可以通过在生命周期函数shouldComponentUpdate中执行return false来阻止页面的更新，从而减少不必要的render执行。React.PureComponent会自动执行 shouldComponentUpdate。</p>
+<p>两者区别在于 React.Component 并未实现 shouldComponentUpdate()，而 React.PureComponent 中以浅比较 props 和 state 的方式实现该函数。</p>
+<p>使用pureComponent的好处：当组件更新时，如果组件的props或者state都没有改变，render函数就不会触发。省去虚拟DOM的生成和对比过程，达到提升性能的目的。这是因为react自动做了一层浅比较。</p>
+<h2 id="react_2">React 高阶组件是什么，适用什么场景</h2>
+<p>高阶组件（HOC）是 React 中用于复用组件逻辑的一种高级技巧。HOC 本身不是 React API 的一部分，它是一种基于 React 的组合特性而形成的设计模式。</p>
+<p>适用场景</p>
+<ul>
+<li>代码复用，逻辑抽象</li>
+<li>渲染劫持</li>
+<li>State 抽象和更改</li>
+<li>Props 更改</li>
+</ul>
+<h2 id="reactfragment">对React中Fragment的理解，它的使用场景是什么？</h2>
+<p>在React中，组件返回的元素只能有一个根元素。为了不添加多余的DOM节点，我们可以使用Fragment标签来包裹所有的元素，Fragment标签不会渲染出任何元素。</p>
+<h2 id="reactrefs">React中refs的作用是什么？有哪些应用场景？</h2>
+<p>Refs 提供了一种方式，允许我们访问 DOM 节点或在 render 方法中创建的 React 元素。</p>
+<p>适合使用 refs 的情况：</p>
+<ul>
+<li>管理焦点，文本选择或媒体播放。</li>
+<li>触发动画</li>
+<li>集成第三方 DOM 库</li>
+</ul>
+<h2 id="react-hook">React Hook 解决了什么问题</h2>
+<p><a href="https://mp.weixin.qq.com/s/495CCxYzhtRqbledXrdWFw">说说对React Hooks的理解？解决了什么问题？</a></p>
+<ul>
+<li>
+<p>组件中与状态相关的逻辑难以复用</p>
+<p>Hook 使你在无需修改组件结构的情况下复用状态逻辑。</p>
+</li>
+<li>
+<p>逻辑复杂的组件难以开发和维护</p>
+<p>组件常常在 componentDidMount 和 componentDidUpdate 中获取数据。但是，同一个 componentDidMount 中可能也包含很多其它的逻辑，如设置事件监听，而之后需在 componentWillUnmount 中清除。</p>
+<p>Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据），而并非强制按照生命周期划分。</p>
+</li>
+</ul>
+<h2 id="_1">类组件与函数组件有什么异同？</h2>
+<p>相同点：都是组件，是 React 可复用的最小代码片段，它们会返回页面中渲染的 react 元素，在最终呈现效果上是一致的。</p>
+<p>不同点：</p>
+<ul>
+<li>类组件是面向对象编程的，主打的是继承、生命周期等特点；而函数组件内核是函数式编程，特点是副作用。</li>
+<li>性能优化上，类组件主要依靠 shouldComponentUpdate 阻断渲染来提升性能，而函数组件依靠 React.memo 缓存渲染结果来提升性能。</li>
+</ul>
+<p><strong>React.memo</strong></p>
+<p>React.memo为高阶组件。它与 React.PureComponent 非常相似，但它适用于函数组件，但不适用于 class 组件。
+如果你的函数组件在给定相同 props 的情况下渲染相同的结果，那么你可以通过将其包装在 React.memo 中调用，以此通过记忆组件渲染结果的方式来提高组件的性能表现。这意味着在这种情况下，React 将跳过渲染组件的操作并直接复用最近一次渲染的结果。</p>
+<h2 id="setstate">setState 是同步还是异步？</h2>
+<p>state 的更新是异步的。</p>
+<p>在调用 setState() 后，React 会把输入的参数对象合并到当前的 state。出于性能考虑，React 可能会把多个 setState() 调用合并成一个调用。</p>
+<p>因为 this.props 和 this.state 可能会异步更新，所以你不要依赖他们的值来更新下一个状态。</p>
+<p>要解决这个问题，可以让 setState() 接收一个函数而不是一个对象。这个函数用上一个 state 作为第一个参数，将此次更新被应用时的 props 做为第二个参数：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">((</span><span class="nx">state</span><span class="p">,</span> <span class="nx">props</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">counter</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">counter</span> <span class="o">+</span> <span class="nx">props</span><span class="p">.</span><span class="nx">increment</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="reactsetstate">React中的setState批量更新的过程是什么？</h2>
+<p>调用 setState 时，组件的 state 并不会立即改变， setState 只是把要修改的 state 放入一个队列， React 会优化真正的执行时机。出于性能原因，会将多次 setState 的状态修改合并成一次状态修改。 最终更新只产生一次组件及其子组件的重新渲染，这对于大型应用程序中的性能提升至关重要。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+  <span class="nx">count</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">+</span> <span class="mf">1</span>    <span class="c1">//   入队，[count+1的任务]</span>
+<span class="p">});</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+  <span class="nx">count</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">+</span> <span class="mf">1</span>    <span class="c1">//    入队，[count+1的任务，count+1的任务]</span>
+<span class="p">});</span>
+                                          <span class="err">↓</span>
+                                         <span class="nx">合并</span> <span class="nx">state</span><span class="err">，</span><span class="p">[</span><span class="nx">count</span><span class="o">+</span><span class="mf">1</span><span class="nx">的任务</span><span class="p">]</span>
+                                          <span class="err">↓</span>
+                                         <span class="nx">执行</span> <span class="nx">count</span><span class="o">+</span><span class="mf">1</span><span class="nx">的任务</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="reactsetstate_1">React中setState的第二个参数作用是什么？</h2>
+<p>setState 的第二个参数是一个可选的回调函数。这个回调函数将在组件重新渲染后执行。等价于在 componentDidUpdate 生命周期内执行。</p>
+<h2 id="reactstateprops">React组件的state和props有什么区别？</h2>
+<p>props是从外部传进组件的参数，主要作为就是从父组件向子组件传递数据，props 是只读的。</p>
+<p>state 是在组件中创建的，它是组件的私有属性，外部不可访问，可以通过setState()方法修改，修改 state 后会导致组件重新渲染。</p>
+<h2 id="react_3">React 的生命周期有哪些？</h2>
+<p>生命周期指的是组件从创建到卸载的整个过程，每个过程都有它对应的函数被调用，它有以下几个阶段：</p>
+<ul>
+<li>挂载阶段：组件实例被创建并插入 DOM 中时</li>
+<li>更新阶段：组件的 props 或 state 发生变化时会触发更新</li>
+<li>卸载阶段：组件从 DOM 中移除时</li>
+<li>错误处理：渲染过程，生命周期，或子组件的构造函数中抛出错误时</li>
+</ul>
+<h2 id="react16">React16 废弃了哪些生命周期？为什么？</h2>
+<ul>
+<li>componentWillMount</li>
+<li>componentWillReceiveProps</li>
+<li>componentWillUpdate</li>
+</ul>
+<p>废弃的原因：是在React16的Fiber架构中，调和过程会多次执行will周期，不再是一次执行，失去了原有的意义。此外，多次执行，在周期中如果有setState或dom操作，会触发多次重绘，影响性能，也会导致数据错乱。</p>
+<h2 id="_2">单向数据流</h2>
+<p><strong>React 中数据是向下流动的，数据的流向只能通过 props 由外层向内层一层层传递。</strong></p>
+<ul>
+<li>props 是只读的，组件不能修改自身接收的 props</li>
+<li>state 是组件的内部状态，除了拥有并设置它的组件，其他组件无法访问</li>
+<li>组件可以选择 state 作为 props 向下传递到它的子组件中</li>
+<li>从 state 派生出来的任何数据只能影响到书中“低于”它们的组件</li>
+</ul>
+<h2 id="dom">虚拟 DOM 的原理</h2>
+<p>React会在内存中维护一个虚拟DOM树（js 对象），对这个树进行读或写，实际上是对虚拟DOM进行操作。当数据变化时，React会自动更新虚拟DOM，然后将新的虚拟DOM和旧的虚拟DOM进行对比，找到变更的部分，得出一个diff，然后将diff放到一个队列里，最终批量更新这些diff到DOM中。</p>
+<p>虚拟DOM的优缺点</p>
+<ul>
+<li>优点：最终表现在DOM上的修改只是变更的部分，可以保证非常高效的渲染。</li>
+<li>缺点：首次渲染大量DOM时，由于多了一层虚拟DOM的计算，会比innerHTML插入慢。</li>
+</ul>
+<h2 id="_3">父子组件通信方式</h2>
+<ul>
+<li>父组件向子组件通信：父组件通过 props 向子组件传递需要的信息。</li>
+<li>子组件向父组件通信：props+回调的方式。</li>
+</ul>
+<h2 id="_4">跨级组件的通信方式？</h2>
+<p>父组件向子组件的子组件通信，向更深层子组件通信：</p>
+<ul>
+<li>
+<p>使用props</p>
+<p>利用中间组件层层传递,但是如果父组件结构较深，那么中间每一层组件都要去传递props，增加了复杂度，并且这些props并不是中间组件自己需要的。</p>
+</li>
+<li>
+<p>使用context</p>
+<p>Context 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法。可以把要通信的内容放在这个容器中，这样不管嵌套多深，都可以随意取用，对于跨越多层的全局数据可以使用context实现。</p>
+</li>
+</ul>
+<h2 id="_5">非嵌套关系组件的通信方式？</h2>
+<ul>
+<li>通过 redux 进行全局状态管理</li>
+<li>如果是兄弟组件通信，可以找到这两个兄弟节点共同的父节点, 结合父子间通信方式进行通信。</li>
+</ul>
+<h2 id="react-router">React-Router的路由有几种模式？</h2>
+<ul>
+<li>
+<p>BrowserRouter</p>
+<p>它使用 HTML5 提供的 history API（pushState、replaceState 和 popstate 事件）来保持 UI 和 URL 的同步。 <code>xxx.com/path</code></p>
+</li>
+<li>
+<p>HashRouter</p>
+<p>使用 URL 的 hash 部分（即 window.location.hash）来保持 UI 和 URL 的同步。<code>xxx.com/#/path</code></p>
+</li>
+</ul>
+<h2 id="react-routerurl">React-Router如何获取URL的参数？</h2>
+<ul>
+<li>
+<p>get 传值</p>
+<p>通过<code>this.props.location.search</code>获取url中参数内容字串，可以用url，querystring，浏览器提供的api URLSearchParams对象或者自己封装的方法去解析具体的参数的值。</p>
+</li>
+<li>
+<p>动态路由传值</p>
+<p>路由需要配置成动态路由：如<code>path='/admin/:id'</code>，传参方式，如<code>'admin/111'</code>。通过<code>this.props.match.params.id</code>取得url中的动态路由id部分的值，除此之外还可以通过useParams（Hooks）来获取。</p>
+</li>
+<li>
+<p>通过query或state传值</p>
+<p>传参方式如：在Link组件的to属性中可以传递对象<code>{pathname:'/admin',query:'111',state:'111'}</code>。通过<code>this.props.location.state</code>或<code>this.props.location.query</code>来获取即可，传递的参数可以是对象、数组等，但是存在缺点就是只要刷新页面，参数就会丢失。</p>
+</li>
+</ul>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../redux/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Redux" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Redux
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../React%20Native/" class="md-footer__link md-footer__link--next" aria-label="Next: React Native" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              React Native
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "header.autohide", "content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.ecf98df9.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../extra/index.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2060 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>JavaScript 基础 - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6b80c2a2.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra/index.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#javascript" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              JavaScript 基础
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          HTML + CSS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HTML + CSS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          HTML + CSS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%20%2B%20CSS/" class="md-nav__link">
+        HTML + CSS 基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%20%2B%20CSS/flex/" class="md-nav__link">
+        Flex Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%20%2B%20CSS/grid/" class="md-nav__link">
+        Grid Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%20%2B%20CSS/practice/" class="md-nav__link">
+        HTML + CSS 应用
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%20%2B%20CSS/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" class="md-nav__link">
+        响应式布局
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          JavaScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="JavaScript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          JavaScript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          JavaScript 基础
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        JavaScript 基础
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    数据类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#null-undefined" class="md-nav__link">
+    null 和 undefined 的区别是什么
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typeof-null-object" class="md-nav__link">
+    typeof null 的值为什么是 object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    原始值和引用值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    隐式类型转换
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    变量提升
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    作用域和作用域链
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es6" class="md-nav__link">
+    ES6 暂时死区
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es6-es5" class="md-nav__link">
+    ES6 代码转成 ES5 代码的实现思路是什么 ❓
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#this" class="md-nav__link">
+    对 this 对象的理解
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#callapply-bind" class="md-nav__link">
+    call、apply 和 bind 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forin-forof" class="md-nav__link">
+    for...in 和 for...of 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-object" class="md-nav__link">
+    Map 和 Object 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-weakmap" class="md-nav__link">
+    Map 和 WeakMap 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-weakset" class="md-nav__link">
+    Set 和 WeakSet 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promise" class="md-nav__link">
+    Promise 介绍和使用
+  </a>
+  
+    <nav class="md-nav" aria-label="Promise 介绍和使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promiseprototypethen" class="md-nav__link">
+    Promise.prototype.then()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promiseprototypecatch" class="md-nav__link">
+    Promise.prototype.catch()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promiseall" class="md-nav__link">
+    Promise.all()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promiseallsettled" class="md-nav__link">
+    Promise.allSettled()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promiserace" class="md-nav__link">
+    Promise.race()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asyncawait" class="md-nav__link">
+    Async...await ❓
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    原型和原型链
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    原型对象、实例对象、构造函数之间的关系
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    对象和原型对象的理解
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new" class="md-nav__link">
+    new 操作做了哪些事情
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setter-getter" class="md-nav__link">
+    setter 和 getter 方法的用途
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    闭包及其应用场景
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="advancement/" class="md-nav__link">
+        JavaScript 进阶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="es6/" class="md-nav__link">
+        ES6+ 新增特性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="practice/" class="md-nav__link">
+        JavaScript 应用
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          React
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="React" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          React
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React/" class="md-nav__link">
+        React 知识点
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React/hooks/" class="md-nav__link">
+        React Hooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React/redux/" class="md-nav__link">
+        Redux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        React 常见题
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          React Native
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="React Native" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          React Native
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React%20Native/" class="md-nav__link">
+        React Native
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Vue
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vue" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Vue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/" class="md-nav__link">
+        Vue 知识点
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/vue-router/" class="md-nav__link">
+        Vue Router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/vuex/" class="md-nav__link">
+        Vuex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        Vue 生态圈
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        Vue 常见问题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/%E6%B7%B1%E5%85%A5%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/" class="md-nav__link">
+        深入响应式原理
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Web APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web APIs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Web APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%20APIs/XMLHttpRequest/" class="md-nav__link">
+        XMLHttpRequest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%20APIs/touch%20events/" class="md-nav__link">
+        Touch Events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%20APIs/window/" class="md-nav__link">
+        Window
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Node.js
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node.js" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Node.js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node.js/" class="md-nav__link">
+        Node.JS 知识点
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          其他
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="其他" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          其他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        知识点集合
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/Electron/" class="md-nav__link">
+        Electron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/webpack/" class="md-nav__link">
+        webpack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/%E6%A1%86%E6%9E%B6/" class="md-nav__link">
+        框架
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        算法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    数据类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#null-undefined" class="md-nav__link">
+    null 和 undefined 的区别是什么
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typeof-null-object" class="md-nav__link">
+    typeof null 的值为什么是 object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    原始值和引用值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    隐式类型转换
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    变量提升
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    作用域和作用域链
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es6" class="md-nav__link">
+    ES6 暂时死区
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es6-es5" class="md-nav__link">
+    ES6 代码转成 ES5 代码的实现思路是什么 ❓
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#this" class="md-nav__link">
+    对 this 对象的理解
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#callapply-bind" class="md-nav__link">
+    call、apply 和 bind 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forin-forof" class="md-nav__link">
+    for...in 和 for...of 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-object" class="md-nav__link">
+    Map 和 Object 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-weakmap" class="md-nav__link">
+    Map 和 WeakMap 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-weakset" class="md-nav__link">
+    Set 和 WeakSet 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promise" class="md-nav__link">
+    Promise 介绍和使用
+  </a>
+  
+    <nav class="md-nav" aria-label="Promise 介绍和使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promiseprototypethen" class="md-nav__link">
+    Promise.prototype.then()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promiseprototypecatch" class="md-nav__link">
+    Promise.prototype.catch()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promiseall" class="md-nav__link">
+    Promise.all()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promiseallsettled" class="md-nav__link">
+    Promise.allSettled()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promiserace" class="md-nav__link">
+    Promise.race()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asyncawait" class="md-nav__link">
+    Async...await ❓
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    原型和原型链
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    原型对象、实例对象、构造函数之间的关系
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    对象和原型对象的理解
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new" class="md-nav__link">
+    new 操作做了哪些事情
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setter-getter" class="md-nav__link">
+    setter 和 getter 方法的用途
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    闭包及其应用场景
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="javascript">JavaScript 基础</h1>
+<h2 id="_1">数据类型</h2>
+<p>JavaScript 是一种弱类型或者说动态语言。这意味着你不用提前声明变量的类型，在程序运行过程中，类型会被自动确定.</p>
+<p>基本类型共有7种：string，number，bigint，boolean，null，undefined，symbol (ECMAScript 2016新增)。</br>
+所有基本类型的值都是不可改变的，可以使用 <code>typeof</code> 检查类型</p>
+<h2 id="null-undefined">null 和 undefined 的区别是什么</h2>
+<h2 id="typeof-null-object">typeof null 的值为什么是 object</h2>
+<h2 id="_2">原始值和引用值</h2>
+<p><a href="https://www.w3school.com.cn/js/pro_js_value.asp">w3school - ECMAScript 原始值和引用值</a></p>
+<p>在 ECMAScript 中，变量可以存在两种类型的值，即原始值和引用值。</p>
+<p><b>原始值</b>
+存储在栈（stack）中的简单数据段，也就是说，它们的值直接存储在变量访问的位置。由于这些原始类型占据的空间是固定的，所以可将他们存储在较小的内存区域 - 栈中。这样存储便于迅速查寻变量的值。</p>
+<p><b>引用值</b>
+存储在堆（heap）中的对象，也就是说，存储在变量处的值是一个指针（point），指向存储对象的内存处。</p>
+<h2 id="_3">隐式类型转换</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;5&#39;</span> <span class="o">-</span> <span class="mf">3</span><span class="p">)</span> <span class="c1">// 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;10&#39;</span> <span class="o">+</span> <span class="mf">3</span> <span class="o">-</span> <span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// 101</span>
+</code></pre></div>
+</td></tr></table>
+<p><img alt="隐式类型转换表" src="../resources/convert-table.png" /></p>
+<p>参考：<a href="https://chinese.freecodecamp.org/news/javascript-implicit-type-conversion/">JavsScript 隐式类型转换</a></p>
+<h2 id="_4">变量提升</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Hoisting">mdn - 变量提升</a></p>
+<p>变量和函数声明在代码里的位置是不变，在编译阶段被放入内存中。</p>
+<p>函数和变量相比，会被优先提升。这意味着函数会被提升到更靠前的位置。</p>
+<p>变量提升只发生在当前作用域，声明提升到当前作用域的顶部。</p>
+<p><b>只有声明被提升</b></p>
+<p>JavaScript 只会提升声明，不会提升其初始化。如果一个变量先被使用再被声明和赋值的话，使用时的值是 undefined。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span> <span class="c1">// Returns undefined</span>
+<span class="kd">var</span> <span class="nx">num</span><span class="p">;</span>
+<span class="nx">num</span> <span class="o">=</span> <span class="mf">6</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<p>如果你先赋值、再使用、最后声明该变量，使用时能获取到所赋的值</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span> <span class="c1">// Returns undefined</span>
+<span class="kd">var</span> <span class="nx">num</span><span class="p">;</span>
+<span class="nx">num</span> <span class="o">=</span> <span class="mf">6</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_5">作用域和作用域链</h2>
+<p><b>什么是作用域？</b></p>
+<p>JS中的作用域指的是变量的可访问的区域，作用域是在编译阶段确定的，而非执行阶段确定。</p>
+<p>作用域的类型: 全局作用域；函数作用域；块级作用域。</p>
+<p><b>全局作用域</b></p>
+<p>任何不在函数中或是大括号中声明的变量，都是在全局作用域下，全局作用域下声明的变量可以在程序的任意位置访问。</p>
+<p><b>函数作用域</b></p>
+<p>函数作用域也叫局部作用域，如果一个变量是在函数内部声明的它就在一个函数作用域下面。这些变量只能在函数内部访问，不能在函数以外去访问。</p>
+<p><b>块级作用域</b></p>
+<p>ES6 引入了 <code>let</code> 和 <code>const</code> 关键字，和 <code>var</code> 关键字不同，在大括号中使用 <code>let</code> 和 <code>const</code> 声明的变量存在于块级作用域中，在大括号之外不能访问这些变量。</p>
+<p><b>作用域链</b></p>
+<p>JS 是基于词法作用域的语言，每一段代码都有与之关联的作用域链，这个作用域链是一个对象列表，这组对象定义了这段代码“作用域”中的变量。</p>
+<p>当 JS 中使用一个变量的时候，首先 JS 引擎会尝试在当前作用域下去寻找该变量，如果没找到，再到它的上层作用域寻找，以此类推直到找到该变量或是已经到了全局作用域。
+如果在全局作用域里仍然找不到该变量，它就会在全局范围内隐式声明该变量(非严格模式下)或是直接报错。</p>
+<h2 id="es6">ES6 暂时死区</h2>
+<p>只要块级作用域内存在 <code>let</code> 命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。</p>
+<p>ES6 明确规定，如果区块中存在 <code>let</code> 和 <code>const</code> 命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。在声明之前就使用这些变量，就会报错。</p>
+<p>在代码块内，使用 <code>let</code> 命令声明变量之前，该变量都是不可用的。这在语法上，称为“暂时性死区”（temporal dead zone，简称 TDZ）。</p>
+<h2 id="es6-es5">ES6 代码转成 ES5 代码的实现思路是什么 ❓</h2>
+<p>Babel 的实现方式：</p>
+<ol>
+<li>将代码字符串解析成抽象语法树，即所谓的 AST；</li>
+<li>对 AST 进行处理，在这个阶段可以对 ES6 AST 进行相应转换，即转换成 ES5 AST；</li>
+<li>根据处理后的 AST 再生成代码字符串；</li>
+</ol>
+<h2 id="this">对 this 对象的理解</h2>
+<h2 id="callapply-bind">call、apply 和 bind 的区别</h2>
+<p>用 Function.prototype.call 或 Function.prototype.apply 可以动态地改变传入函数的 this 指向</p>
+<p><b>apply</b></p>
+<p>apply 接受两个参数，第一个参数指定了函数体内 this 对象的指向，第二个参数为一个带下 标的集合，这个集合可以为数组，也可以为类数组，apply 方法把这个集合中的元素作为参数传 递给被调用的函数</p>
+<p><b>call</b></p>
+<p>call 传入的参数数量不固定，跟 apply 相同的是，第一个参数也是代表函数体内的 this 指向， 从第二个参数开始往后，每个参数被依次传入函数</p>
+<p>当使用 call 或者 apply 的时候，如果我们传入的第一个参数为 null，函数体内的 this 会指 向默认的宿主对象，在浏览器中则是 window</p>
+<p>call 比 apply 的性能要好，call 传入参数的格式正式内部所需要的格式</p>
+<p><b>bind</b></p>
+<p>大部分高级浏览器都实现了内置的 Function.prototype.bind，用来指定函数内部的 this 指向。</p>
+<h2 id="forin-forof">for...in 和 for...of 的区别</h2>
+<p>for...in 遍历对象的可枚举属性</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="mf">3</span> <span class="p">}</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="c1">// x, y, z</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>for...of 在可迭代对象上创建一个迭代循环，可以遍历数组、String、Set、Map等结构，为每个不同属性值执行语句</p>
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Array</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">]</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">of</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="c1">// 1,2,3</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">String</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">of</span> <span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="c1">// 1,2,3</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Set</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">set</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Set</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">])</span>
+<span class="nx">set</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mf">4</span><span class="p">)</span>
+<span class="nx">set</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mf">5</span><span class="p">)</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">of</span> <span class="nx">set</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="c1">// 1,2,3,4,5</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Map</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">([[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;Lily&#39;</span><span class="p">]])</span>
+<span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="mf">1</span><span class="p">)</span>
+<span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="mf">2</span><span class="p">)</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">of</span> <span class="nx">map</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="c1">// [&#39;name&#39;, &#39;Lily&#39;], [&#39;x&#39;, 1], [&#39;y&#39;, 2]</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+<h2 id="map-object">Map 和 Object 的区别</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map">mdn - map</a></p>
+<ol>
+<li>
+<p>意外的键</p>
+<p>Map 默认情况不包含任何键。只包含显式插入的键。<br>
+一个 Object 有一个原型, 原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。</p>
+</li>
+<li>
+<p>键的类型</p>
+<p>一个 Map的键可以是任意值，包括函数、对象或任意基本类型。<br>
+一个Object 的键必须是一个 String 或是Symbol。</p>
+</li>
+<li>
+<p>Size</p>
+<p>Map 的键值对个数可以轻易地通过size 属性获取。<br>
+Object 的键值对个数只能手动计算</p>
+</li>
+<li>
+<p>迭代</p>
+<p>Map 是 iterable 的，所以可以直接被迭代。<br>
+迭代一个Object需要以某种方式获取它的键然后才能迭代。</p>
+</li>
+<li>
+<p>性能</p>
+<p>Map 在频繁增删键值对的场景下表现更好。<br>
+Object 在频繁添加和删除键值对的场景下未作出优化。</p>
+</li>
+</ol>
+<h2 id="map-weakmap">Map 和 WeakMap 的区别</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap">mdn - weakMap</a></p>
+<ol>
+<li>
+<p>键值类型</p>
+<p>Map 的键和值可以是任意的，原始值或者对象。<br>
+WeakMap 的键只能是对象，值可以是任意的。</p>
+</li>
+<li>
+<p>弱引用</p>
+<p>原生的 WeakMap 持有的是每个键对象的“弱引用”，这意味着在没有其他引用存在时垃圾回收能正确进行。原生 WeakMap 的结构是特殊且有效的，其用于映射的 key 只有在其没有被回收时才是有效的。</p>
+</li>
+<li>
+<p>枚举</p>
+<p>Map 对象可以调用 <code>keys()</code> 返回一个新的包含所有元素 key 的迭代对象。<br>
+WeakMap 的 key 是不可枚举的 (没有方法能给出所有的 key)</p>
+</li>
+</ol>
+<h2 id="set-weakset">Set 和 WeakSet 的区别</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet">mdn - weakSet</a></p>
+<blockquote>
+<p>Set对象是值的集合，你可以按照插入的顺序迭代它的元素。 Set中的元素只会出现一次，即 Set 中的元素是唯一的。</p>
+</blockquote>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">set</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Set</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">])</span>
+<span class="nx">set</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;apple&#39;</span><span class="p">)</span> <span class="c1">// 在Set对象尾部添加一个元素。返回该Set对象。</span>
+<span class="nx">set</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">set</span><span class="p">.</span><span class="nx">size</span><span class="p">)</span> <span class="c1">// 4</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">set</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mf">1</span><span class="p">))</span> <span class="c1">// true, 移除Set中与这个值相等的元素</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">set</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="mf">1</span><span class="p">))</span> <span class="c1">// false </span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">set</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="s1">&#39;apple&#39;</span><span class="p">))</span> <span class="c1">// true</span>
+<span class="nx">set</span><span class="p">.</span><span class="nx">clear</span><span class="p">()</span> <span class="c1">// 移除Set对象内的所有元素。</span>
+</code></pre></div>
+</td></tr></table>
+<p>Set 和 WeakSet 区别：</p>
+<ol>
+<li>
+<p>存储类型</p>
+<p>Set 对象的元素可以是任何类型，原始值或对象引用。</br>
+WeakSet 只能是对象的集合，而不能是任何类型的任意值。</p>
+</li>
+<li>
+<p>弱引用</p>
+<p>WeakSet持弱引用：集合中对象的引用为弱引用。 如果没有其他的对WeakSet中对象的引用，那么这些对象会被当成垃圾回收掉。 这也意味着WeakSet中没有存储当前对象的列表。</p>
+</li>
+<li>
+<p>枚举</p>
+<p>Set 对象有 <code>values()</code> 和 <code>keys()</code> 方法，可以返回包含所有元素的一个迭代对象。</br>
+WeakSet 是不可枚举的。</p>
+</li>
+</ol>
+<h2 id="promise">Promise 介绍和使用</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Using_promises">mdn - 使用promise</a> </br>
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">mdn - promise</a></p>
+<blockquote>
+<p>Promise 是一个对象，它代表了一个异步操作的最终完成或者失败。</p>
+<p>它让我们能够把异步操作最终的成功返回值或者失败原因和相应的处理程序关联起来。 这样使得异步方法可以像同步方法那样返回值：异步方法并不会立即返回最终的值，而是会返回一个 promise，以便在未来某个时候把值交给使用者。</p>
+</blockquote>
+<p>Promise 有三种状态：</p>
+<ol>
+<li><code>pending</code>，初始状态，既没有成功也没有失败</li>
+<li><code>fulfilled</code>，意味着操作成功</li>
+<li><code>rejected</code>，意味着操作失败</li>
+</ol>
+<p><b>Promise 的链式调用</b></p>
+<p>待定状态的 Promise 对象要么会通过一个值被fulfilled，要么会通过一个原因被rejected。当这些情况之一发生时，我们用 promise 的 then 方法排列起来的相关处理程序就会被调用。</p>
+<p>因为 Promise.prototype.then 和  Promise.prototype.catch 方法返回的是 promise， 所以它们可以被链式调用。</p>
+<h3 id="promiseprototypethen">Promise.prototype.then()</h3>
+<p>then() 方法返回一个 Promise。它最多需要有两个参数：Promise 的成功和失败情况的回调函数。
+当 Promise 状态变更为 fulfilled 或 rejected 后，会调用 then() 方法。</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">resolve</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="nx">p</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">value</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="c1">// success</span>
+<span class="p">},</span> <span class="nx">err</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">reject</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">reject</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="nx">p</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">value</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span>
+<span class="p">},</span> <span class="nx">err</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="c1">// error</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+<h3 id="promiseprototypecatch">Promise.prototype.catch()</h3>
+<p>catch() 方法返回一个Promise，并且处理拒绝的情况。当返回一个 rejected 的 Promise 或抛出错误后会调用 catch() 方法。</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">抛出错误</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="nx">p</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">value</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="c1">// success</span>
+  <span class="k">throw</span> <span class="s2">&quot;Throw an error&quot;</span>
+<span class="p">},</span> <span class="nx">err</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="c1">// Throw an error</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">返回rejected Promise</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="nx">p</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">value</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="c1">// success</span>
+  <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="s1">&#39;reject&#39;</span><span class="p">)</span>
+<span class="p">},</span> <span class="nx">err</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="c1">// reject</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+<h3 id="promiseall">Promise.all()</h3>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">mdn - Promise.all()</a></p>
+<blockquote>
+<p>Promise.all() 方法接收一个promise的iterable类型的输入，并且只返回一个Promise实例，那个输入的所有promise的resolve回调的结果是一个数组。这个Promise的resolve回调执行是在所有输入的promise的resolve回调都结束，或者输入的iterable里没有promise了的时候。它的reject回调执行是，只要任何一个输入的promise的reject回调执行或者输入不合法的promise就会立即抛出错误，并且reject的是第一个抛出的错误信息。</p>
+</blockquote>
+<p>简单来说，Promise.all() 输入一组 Promise，当输入的 Promise 都被 resolve 后，外层的 Promise 才会 
+被resolve，并且返回的结果是一个数组，数组元素是所有内部 Promise 的 resolve 值。</br>
+如果输入的 Promise 只要有一个 reject 或者抛出错误，那么外层的 Promise 会被 rejected, 并抛出第一个错误信息。</p>
+<p>此方法在集合多个 promise 的返回结果时很有用。</p>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">all resolved</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">]).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="c1">// [hello, world]</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">exist rejected</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="s1">&#39;err1&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="s1">&#39;err2&#39;</span><span class="p">)</span>
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span><span class="p">]).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="c1">// 未调用</span>
+<span class="p">},</span> <span class="nx">err</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="c1">// err1</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+<h3 id="promiseallsettled">Promise.allSettled()</h3>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled">mdn - Promise.allSettled</a></p>
+<blockquote>
+<p>Promise.allSettled()方法返回一个在所有给定的promise都已经fulfilled或rejected后的promise，并带有一个对象数组，每个对象表示对应的promise结果。</p>
+<p>当您有多个彼此不依赖的异步任务成功完成时，或者您总是想知道每个promise的结果时，通常使用它。</p>
+<p>相比之下，Promise.all() 更适合彼此相互依赖或者在其中任何一个reject时立即结束。</p>
+</blockquote>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">all resolved</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">allSettled</span><span class="p">([</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">]).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="c1">// res 打印</span>
+<span class="c1">// [</span>
+<span class="c1">//   { status: &#39;fulfilled&#39;, value: &#39;hello&#39; },</span>
+<span class="c1">//   { status: &#39;fulfilled&#39;, value: &#39;world&#39; }</span>
+<span class="c1">// ]</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">some rejected</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="s1">&#39;err1&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="s1">&#39;err2&#39;</span><span class="p">)</span>
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">allSettled</span><span class="p">([</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span><span class="p">]).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+<span class="p">},</span> <span class="nx">err</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;err&#39;</span> <span class="o">+</span> <span class="nx">err</span><span class="p">)</span> <span class="c1">// 未调用</span>
+<span class="p">})</span>
+
+<span class="c1">// res 打印</span>
+<span class="c1">// [</span>
+<span class="c1">//   { status: &#39;fulfilled&#39;, value: &#39;hello&#39; },</span>
+<span class="c1">//   { status: &#39;rejected&#39;, reason: &#39;err1&#39; },</span>
+<span class="c1">//   { status: &#39;rejected&#39;, reason: &#39;err2&#39; }</span>
+<span class="c1">// ]</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+<h3 id="promiserace">Promise.race()</h3>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/race">mdn - Promise.race()</a></p>
+<blockquote>
+<p>Promise.race(iterable) 方法返回一个 promise，一旦迭代器中的某个promise解决或拒绝，返回的 promise就会解决或拒绝。</p>
+</blockquote>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;aaa&#39;</span><span class="p">),</span> <span class="mf">100</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">race</span><span class="p">([</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">]).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="c1">// 未调用</span>
+<span class="p">},</span> <span class="nx">err</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="c1">// error</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="asyncawait">Async...await ❓</h2>
+<p>基于 promise 语法糖， 使异步代码更容易编写和阅读。使用它们，异步代码看起来更像同步代码。async 放在函数声明之前。</p>
+<h2 id="_6">原型和原型链</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes">mdn - 对象原型</a></p>
+<p>JS 中对象的属性分为两类：</p>
+<ul>
+<li>自有属性，直接在对象中定义的属性；</li>
+<li>继承属性，在对象的原型对象中定义的属性</li>
+</ul>
+<p><b>原型机制</b></p>
+<blockquote>
+<p>每一个JS对象（null除外）都和另外一个对象关联，另外一个对象就是我们所说的原型，每个对象都从原型继承属性。继承的属性是定义在 prototype 属性上的。</p>
+</blockquote>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">)</span> <span class="c1">// {} undefined</span>
+
+<span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sayHi</span> <span class="o">=</span> <span class="s2">&quot;Hi&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">)</span> <span class="c1">// {} Hi</span>
+</code></pre></div>
+</td></tr></table>
+<p><b>原型链</b></p>
+<blockquote>
+<p>每个对象拥有一个原型对象，对象以其原型为模板、从原型继承方法和属性。原型对象也可能拥有原型，并从中继承方法和属性，一层一层、以此类推。这种关系常被称为原型链 (prototype chain)，它解释了为何一个对象会拥有定义在其他对象中的属性和方法。</p>
+</blockquote>
+<p><b>__proto__ 和 prototype</b></p>
+<ul>
+<li>被继承的属性是定义在prototype属性中的</li>
+<li>__proto__ 是每个对象都有的属性，prototype 是函数才会有属性</li>
+<li>__proto__ 是隐式原型，prototype是显示原型</li>
+</ul>
+<h2 id="_7">原型对象、实例对象、构造函数之间的关系</h2>
+<p><b>prototype 属性</b>
+在 JS 中，函数是允许拥有属性的。 每个函数都有一个特殊的属性叫作原型（prototype）</p>
+<p><b>constructor 属性</b>
+函数的prototype中有一个constructor属性，每个实例对象都从原型中继承了一个constructor属性，该属性指向了用于构造此实例对象的构造函数。</p>
+<p><b>构造函数和实例对象</b>
+构造函数用来初始化一个新建的对象，构造函数的prototype属性被用作新对象的原型。</br>
+通过 <code>new</code> 关键字来调用函数创建实例对象，被调用的函数为构造函数</p>
+<p>总结：
+- 函数拥有prototype属性
+- 每一个prototype属性会获得一个constructor属性，constructor指向prototype属性所在函数
+- 通过new创建的实例会指向constructor所在的原型对象</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://blog.csdn.net/u014205965/article/details/45798861">JS面向对象-原型对象，实例对象，构造函数的关系</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">mdn - 继承与原型链</a></li>
+</ul>
+<h2 id="_8">对象和原型对象的理解</h2>
+<ul>
+<li>在原型上扩展的可枚举方法，会被for in循环出来</li>
+<li>使用object.defineProperty可向对象添加或者修改属性</li>
+<li>hasOwnProperty方法是用来检测给定的属性是否在当前对象的实例中。</li>
+</ul>
+<h2 id="new">new 操作做了哪些事情</h2>
+<p>new 运算符创建一个用户自定义的对象的实例或具有构造函数的内置对象的实例。</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">sex</span><span class="p">,</span> <span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">sex</span> <span class="o">=</span> <span class="nx">sex</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">men</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Mary&#39;</span><span class="p">,</span> <span class="s1">&#39;female&#39;</span><span class="p">,</span> <span class="mf">18</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">men</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">men</span><span class="p">.</span><span class="nx">sex</span><span class="p">,</span> <span class="nx">men</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span> <span class="c1">// Mary female 18</span>
+</code></pre></div>
+</td></tr></table>
+new 关键字会进行如下操作：</p>
+<ol>
+<li>创建一个空的 JS 对象，即 <code>{}</code>；</li>
+<li>为步骤1新创建的对象添加属性<code>_proto_</code>，将该属性链接至构造函数的原型对象；</li>
+<li>将步骤1新创建的对象作为<code>this</code>的上下文；</li>
+<li>如果该函数没有返回对象则返回<code>this</code>；</li>
+</ol>
+<h2 id="setter-getter">setter 和 getter 方法的用途</h2>
+<p><strong>setter</strong></p>
+<p>当尝试设置属性时，set语法将对象属性绑定到要调用的函数。</p>
+<p>在 javascript 中，如果试着改变一个属性的值，那么对应的 setter 将被执行。setter 经常和 getter 连用以创建一个伪属性。</p>
+<p><strong>getter</strong></p>
+<p>有时需要允许访问返回动态计算值的属性，或者你可能需要反映内部变量的状态，而不需要使用显式方法调用。在JavaScript中，可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/get">getter</a> 来实现。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;小明&#39;</span><span class="p">,</span>
+  <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;王&#39;</span><span class="p">,</span>
+  <span class="nx">get</span> <span class="nx">fullName</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span>
+  <span class="p">},</span>
+  <span class="nx">set</span> <span class="nx">name</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="nx">t</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">fullName</span><span class="p">);</span> <span class="c1">// &quot;王小明&quot;</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">fullName</span><span class="p">);</span> <span class="c1">// &quot;王小明x&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// &quot;undefined&quot;</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_9">闭包及其应用场景</h2>
+<p><b>闭包的理解</b></p>
+<ul>
+<li>闭包是指有权访问另一个函数作用域中变量的函数；</li>
+<li>函数内再嵌套函数，返回到外部形成闭包；</li>
+<li>内部函数可以引用外层的参数和变量</li>
+<li>参数和变量不会被垃圾回收机制回收</li>
+</ul>
+<p><b>闭包的作用</b></p>
+<ul>
+<li>延长局部变量的生命周期</li>
+<li>可以读取函数内部变量，让这些变量的值始终保持在内存中</li>
+</ul>
+<p><b>闭包的使用场景</b></p>
+<ul>
+<li>使用闭包代替全局变量, 匿名自执行函数</li>
+<li>在函数执行之前要为执行的函数提供具体参数</li>
+<li>为节点循环绑定click事件，在事件中使用当次循环的值，而不是最后一次循环的值</li>
+</ul>
+<p><b>闭包的缺点及解决方案</b></p>
+<p>一般函数在调用执行后函数就会被释放，但如果函数中产生了闭包，就会导致函数执行完毕后，函数内部的局部变量没有被释放，使得占用内存时间会变长，容易造成内存泄漏。</p>
+<p>解决方案：</p>
+<ul>
+<li>减少闭包使用</li>
+<li>及时释放，变量执行完后置为null</li>
+</ul>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../HTML%20%2B%20CSS/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 响应式布局" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              响应式布局
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="advancement/" class="md-footer__link md-footer__link--next" aria-label="Next: JavaScript 进阶" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              JavaScript 进阶
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand", "header.autohide", "content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.ecf98df9.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../extra/index.js"></script>
+      
+    
+  </body>
+</html>

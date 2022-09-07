@@ -1,0 +1,1778 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>HTML + CSS 基础 - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6b80c2a2.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra/index.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#html-css" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HTML + CSS 基础
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          HTML + CSS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HTML + CSS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          HTML + CSS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          HTML + CSS 基础
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        HTML + CSS 基础
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#src-href" class="md-nav__link">
+    src 和 href 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alt-title" class="md-nav__link">
+    元素的 alt 和 title 属性有什么区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-import" class="md-nav__link">
+    使用 link 和 @import 导入样式的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-async-defer" class="md-nav__link">
+    script 标签中 async 和 defer 属性有什么用，它们的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    块级元素和行内元素的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    CSS 中哪些属性是可以继承的，哪些不可以
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css_1" class="md-nav__link">
+    CSS 长度单位
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rem" class="md-nav__link">
+    简述 rem 及其转换原理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    简述伪类和伪元素
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opacity-0visibility-hiddendisplay-none" class="md-nav__link">
+    opacity: 0、visibility: hidden、display: none 优劣和适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css_2" class="md-nav__link">
+    CSS 盒模型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flex" class="md-nav__link">
+    flex 布局
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    响应式布局常用解决方案
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    常见的浏览器内核
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    浏览器地址栏输入 URL 到页面展示到底发生了什么
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bfc" class="md-nav__link">
+    说一下 BFC 及其应用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margin" class="md-nav__link">
+    如何避免两个元素的 margin 重叠
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    web 页面渲染事件 ✖️
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    说一下事件流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    说一下重绘和回流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    什么情况下会触发重绘或重排，如何优化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    页面加载过程中会触发哪些事件 ❓
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seo" class="md-nav__link">
+    SEO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web_1" class="md-nav__link">
+    常见的 web 性能方法有哪些
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="flex/" class="md-nav__link">
+        Flex Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="grid/" class="md-nav__link">
+        Grid Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="practice/" class="md-nav__link">
+        HTML + CSS 应用
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" class="md-nav__link">
+        响应式布局
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          JavaScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="JavaScript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          JavaScript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JavaScript/" class="md-nav__link">
+        JavaScript 基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JavaScript/advancement/" class="md-nav__link">
+        JavaScript 进阶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JavaScript/es6/" class="md-nav__link">
+        ES6+ 新增特性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JavaScript/practice/" class="md-nav__link">
+        JavaScript 应用
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          React
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="React" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          React
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React/" class="md-nav__link">
+        React 知识点
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React/hooks/" class="md-nav__link">
+        React Hooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React/redux/" class="md-nav__link">
+        Redux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        React 常见题
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          React Native
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="React Native" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          React Native
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React%20Native/" class="md-nav__link">
+        React Native
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Vue
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vue" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Vue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/" class="md-nav__link">
+        Vue 知识点
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/vue-router/" class="md-nav__link">
+        Vue Router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/vuex/" class="md-nav__link">
+        Vuex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        Vue 生态圈
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        Vue 常见问题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/%E6%B7%B1%E5%85%A5%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/" class="md-nav__link">
+        深入响应式原理
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Web APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web APIs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Web APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%20APIs/XMLHttpRequest/" class="md-nav__link">
+        XMLHttpRequest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%20APIs/touch%20events/" class="md-nav__link">
+        Touch Events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%20APIs/window/" class="md-nav__link">
+        Window
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Node.js
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node.js" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Node.js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node.js/" class="md-nav__link">
+        Node.JS 知识点
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          其他
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="其他" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          其他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        知识点集合
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/Electron/" class="md-nav__link">
+        Electron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/webpack/" class="md-nav__link">
+        webpack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/%E6%A1%86%E6%9E%B6/" class="md-nav__link">
+        框架
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        算法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#src-href" class="md-nav__link">
+    src 和 href 的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alt-title" class="md-nav__link">
+    元素的 alt 和 title 属性有什么区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-import" class="md-nav__link">
+    使用 link 和 @import 导入样式的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-async-defer" class="md-nav__link">
+    script 标签中 async 和 defer 属性有什么用，它们的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    块级元素和行内元素的区别
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    CSS 中哪些属性是可以继承的，哪些不可以
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css_1" class="md-nav__link">
+    CSS 长度单位
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rem" class="md-nav__link">
+    简述 rem 及其转换原理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    简述伪类和伪元素
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opacity-0visibility-hiddendisplay-none" class="md-nav__link">
+    opacity: 0、visibility: hidden、display: none 优劣和适用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css_2" class="md-nav__link">
+    CSS 盒模型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flex" class="md-nav__link">
+    flex 布局
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    响应式布局常用解决方案
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    常见的浏览器内核
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    浏览器地址栏输入 URL 到页面展示到底发生了什么
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bfc" class="md-nav__link">
+    说一下 BFC 及其应用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margin" class="md-nav__link">
+    如何避免两个元素的 margin 重叠
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    web 页面渲染事件 ✖️
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    说一下事件流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    说一下重绘和回流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    什么情况下会触发重绘或重排，如何优化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    页面加载过程中会触发哪些事件 ❓
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seo" class="md-nav__link">
+    SEO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web_1" class="md-nav__link">
+    常见的 web 性能方法有哪些
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="html-css">HTML + CSS 基础</h1>
+<h2 id="src-href">src 和 href 的区别</h2>
+<p>src 和 href 都是用来引用外部的资源。</p>
+<p><strong>src</strong></p>
+<p>src 是 source 的简写
+src 会将其指向的资源下载并应用到文档内，嵌入当前标签所在位置。当前浏览器解析到src时，会暂停其他资源的下载和处理，直到该资源加载完毕。常用在img、iframe、script标签上。</p>
+<p><strong>href</strong></p>
+<p>href 是 hypertext reference 的简写
+href 是超文本引用，它指向一些网络资源，用于当前文档或元素和指向的资源建立关联。当浏览器识别到它指向的⽂件时，就会并⾏下载资源，不会停⽌对当前⽂档的处理。 常用在a、link等标签上。</p>
+<h2 id="alt-title">元素的 alt 和 title 属性有什么区别</h2>
+<p>alt 和 title 同时设置的时候，alt 作为图片的替代文字出现，title 是图片的解释文字</p>
+<h2 id="link-import">使用 link 和 @import 导入样式的区别</h2>
+<ol>
+<li>link是XHTML标签，除了加载CSS外，还可以定义RSS等其他事务；而@import属于CSS范畴，只能加载CSS；</li>
+<li>link引用CSS时，在页面载入时同时加载；而@import需要页面网页完全载入以后加载。</li>
+<li>link是XHTML标签，无兼容问题；而@import是在CSS2.1提出的，低版本的浏览器不支持。</li>
+</ol>
+<!-- - link支持使用Javascript控制DOM去改变样式；而@import不支持。 -->
+<!-- - @import可以在CSS文件中再次引入其他样式表；而link不支持。 -->
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;CSSurl路径&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="p">/&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+<span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="nt">CSS文件路径地址</span><span class="o">)</span><span class="p">;</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="script-async-defer">script 标签中 async 和 defer 属性有什么用，它们的区别</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/script">scirpt 标签</a></p>
+<p>defer 和 async属性都是去异步加载外部的JS脚本文件，它们都不会阻塞页面的解析。<br>
+如果没有defer或async属性，浏览器会立即加载并执行相应的脚本。它不会等待后续加载的文档元素，读取到就会开始加载和执行，这样就阻塞了后续文档的加载。</p>
+<p>区别：</p>
+<ul>
+<li>
+<p>执行顺序</p>
+<p>多个带async属性的标签，不能保证加载的顺序；多个带defer属性的标签，按照加载顺序执行；</p>
+</li>
+<li>
+<p>脚本是否并行执行</p>
+<p>async属性，表示后续文档的加载和执行与js脚本的加载和执行是并行进行的，即异步执行；<br>
+defer属性，加载后续文档的过程和js脚本的加载(此时仅加载不执行)是并行进行的(异步)，js脚本需要等到文档所有元素解析完成之后才执行，DOMContentLoaded事件触发执行之前。</p>
+</li>
+</ul>
+<p>如果存在async, 脚本会被并行请求，并尽快解析和执行。
+defer 这个布尔属性被设定用来通知浏览器该脚本将在文档完成解析后，触发 DOMContentLoaded (en-US) 事件前执行。</p>
+<h2 id="_1">块级元素和行内元素的区别</h2>
+<ul>
+<li>
+<p>块级元素</p>
+<ul>
+<li>单个元素会独占一行；</li>
+<li>元素的宽高、以及内外边距都可设置；</li>
+<li>元素在不设置宽度的情况下，会撑满父元素</li>
+</ul>
+</li>
+<li>
+<p>行内元素</p>
+<ul>
+<li>单个元素不会占据一行，多个元素会在一行排列；</li>
+<li>元素的宽高不可设置；</li>
+<li>内边距可以设置、外边距水平方向有效，竖直方向无效；</li>
+<li>元素在不设置宽度的情况下，随内部元素的内容变化</li>
+</ul>
+</li>
+</ul>
+<p>元素转换</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c">/* 设置元素表现形式为块级元素 */</span>
+<span class="nt">display</span><span class="o">:</span> <span class="nt">block</span><span class="o">;</span>
+
+<span class="c">/* 设置元素表现形式为行内元素 */</span>
+<span class="nt">display</span><span class="o">:</span> <span class="nt">inline</span><span class="o">;</span> 
+
+<span class="c">/* 元素不占据一行，可以设置宽高, 外边距 */</span>
+<span class="nt">display</span><span class="o">:</span> <span class="nt">inline-block</span><span class="o">;</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="css">CSS 中哪些属性是可以继承的，哪些不可以</h2>
+<p>当元素的一个继承属性 （inherited property）没有指定值时，则取父元素的同属性的计算值。</p>
+<p><strong>✔ 继承属性</strong></p>
+<ol>
+<li>
+<p>字体系列属性</p>
+<ul>
+<li>font-family</li>
+<li>font-size</li>
+<li>font-weight</li>
+<li>font-style</li>
+</ul>
+</li>
+<li>
+<p>文本系列属性</p>
+<ul>
+<li>text-indent 文本缩进</li>
+<li>text-align 水平对齐</li>
+<li>line-hight 行高</li>
+<li>word-spacing 单词间的间距</li>
+<li>letter-spacing 字符间的间距</li>
+<li>color</li>
+</ul>
+</li>
+<li>
+<p>光标属性</p>
+<ul>
+<li>cursor</li>
+</ul>
+</li>
+<li>
+<p>元素可见性</p>
+<ul>
+<li>visiblity</li>
+</ul>
+</li>
+<li>
+<p>列表属性</p>
+<ul>
+<li>list-style-type    设置列表项标记的类型</li>
+<li>list-style-image   使用图像来替换列表项的标记</li>
+<li>list-style-position    设置在何处放置列表项标记</li>
+<li>list-style     在一个声明中设置所有的列表属性</li>
+</ul>
+</li>
+<li>
+<p>其他</p>
+</li>
+</ol>
+<p>🚫<strong>非继承属性</strong></p>
+<blockquote>
+<p>display、margin、border、padding、background、height、min-height、max- height、width、min-width、max-width、overflow、position、left、right、top、 bottom、z-index、float、clear、table-layout、vertical-align、page-break-after、 page-bread-before和unicode-bidi。</p>
+</blockquote>
+<ul>
+<li>盒模型相关属性</li>
+<li>定位相关属性</li>
+</ul>
+<p><a href="https://www.w3cschool.cn/article/56682909.html">参考</a></p>
+<h2 id="css_1">CSS 长度单位</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/length">mdn css 长度</a></p>
+<p>单位可分为三类：</p>
+<ul>
+<li>相对长度单位，代表以其他的距离作为单位的一种尺寸。</li>
+<li>字体相对长度单位，根据一个字符的大小来定义长度的。</li>
+<li>绝对长度单位，代表一个物体度量单位。</li>
+</ul>
+<p>常用的 CSS 单位：</p>
+<ul>
+<li><code>em</code>，表示元素的font-size值，如果它用在font-size属性上，则它表示元素继承的font-size值。</li>
+<li><code>1h</code>，使用元素的 line-height 属性的计算值。</li>
+<li><code>rem</code>，代表根元素的 font-size 大小。</li>
+<li><code>vh</code>，可视窗口高度的 1%。</li>
+<li><code>vw</code>，可视窗口宽度的 1%。</li>
+<li><code>vmin</code>，可视窗口宽度和高度两者之间的最小值。</li>
+<li><code>vmax</code>，可视窗口宽度和高度两者之间的最大值。</li>
+<li><code>px</code>，对于普通屏幕，通常是一个设备像素，对于高分辨率屏幕，一个css像素往往占多个设备像素。一般来说，每英寸的像素的数量保持在 96 左右， 1px = 1in 的 96 分之一</li>
+</ul>
+<h2 id="rem">简述 rem 及其转换原理</h2>
+<p><code>rem</code> 是 CSS3 新增的相对长度单位，是指相对于根元素 <code>html</code> 的 <code>font-size</code> 计算值的大小。</p>
+<p>默认根元素的 <code>font-size</code> 都是 <code>16px</code>的。如果想要设置 <code>12px</code> 的字体大小也就是 <code>12px/16px = 0.75rem</code>。</p>
+<ul>
+<li>由于 <code>px</code> 是相对固定单位，字号大小直接被定死，无法随着浏览器进行缩放；</li>
+<li><code>rem</code> 直接相对于根元素 <code>html</code>，避开层级关系，移动端新型浏览器对其支持较好；</li>
+</ul>
+<h2 id="_2">简述伪类和伪元素</h2>
+<p><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a></strong></p>
+<p>CSS 伪类是添加到选择器的关键字，指定要选择的元素的特殊状态。例如，<code>:hover</code> 可被用于在用户将鼠标悬停在按钮上时改变按钮的颜色。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c">/* 所有用户指针悬停的按钮 */</span>
+<span class="nt">button</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>常用的伪类有</p>
+<ul>
+<li><code>:hover</code>，用于用户使用指示设备虚指一个元素（没有激活它）的情况，比如鼠标悬停</li>
+<li><code>:active</code>，匹配被用户激活的元素，常用在 <code>&lt;a&gt;</code> 和 <code>&lt;button&gt;</code>元素中 </li>
+<li><code>:focus</code>，表示获得焦点的元素（如表单输入）</li>
+<li><code>:link</code>，选中所有尚未访问的链接</li>
+<li><code>:visited</code>，表示用户已访问过的链接</li>
+<li><code>:checked</code>，表示任何处于选中状态的radio(<input type="radio">), checkbox (<input type="checkbox">) 或("select") 元素中的option HTML元素("option")</li>
+<li><code>:not</code>，用来匹配不符合一组选择器的元素</li>
+<li><code>:first-child</code>，表示在一组兄弟元素中的第一个元素 </li>
+<li><code>:last-child</code>，表示在一组兄弟元素中的最后一个元素 </li>
+</ul>
+<p><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements">伪元素</a></strong></p>
+<p>伪元素是一个附加至选择器末的关键词，允许你对被选择元素的特定部分修改样式。下例中的 <code>::first-lin</code>e 伪元素可改变段落首行文字的样式。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c">/* 每一个 &lt;p&gt; 元素的第一行。 */</span>
+<span class="nt">p</span><span class="p">::</span><span class="nd">first-line</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+  <span class="k">text-transform</span><span class="p">:</span> <span class="kc">uppercase</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>常用的伪元素有</p>
+<ul>
+<li><code>::before</code>，在选中元素的顶部创建一个伪元素</li>
+<li><code>::after</code>，在选中元素的尾部创建一个伪元素</li>
+<li><code>::selection</code>，应用于文档中被用户高亮的部分，例如鼠标选中文本</li>
+<li><code>::first-letter</code>，选中块级元素第一行第一个字母</li>
+<li><code>::first-line</code>，选中块级元素第一行应用样式</li>
+</ul>
+<p><strong>区别</strong></p>
+<ul>
+<li>伪类使用单冒号，伪元素使用双冒号</li>
+<li>伪类的操作对象是文档树中已存在的元素，而伪元素是创建一个文档树外的元素</li>
+</ul>
+<h2 id="opacity-0visibility-hiddendisplay-none">opacity: 0、visibility: hidden、display: none 优劣和适用场景</h2>
+<ul>
+<li><code>display: none</code> 不占空间，不能点击，会引起回流</li>
+<li><code>visibility: hidden</code> 占据空间，不能点击，引起重绘，子元素可设置 visible 进行显示</li>
+<li><code>opacity: 0</code> 占据空间，可以点击，引起重绘，子元素不影响</li>
+</ul>
+<h2 id="css_2">CSS 盒模型</h2>
+<p>盒模型指的是将页面上的元素表示为一个个矩形的盒子，css决定这些盒子的大小，位置和属性（颜色、背景等）。</p>
+<p>每个盒子的组成为：</p>
+<ul>
+<li>content: 容纳真实的内容，例如文本，图片</li>
+<li>padding: 内边距，扩展到内容区域，填充内容区域与边框的间距。</li>
+<li>border: 容纳边框的区域。</li>
+<li>margin: 外边距，用空白区域扩展至边框区域，用以分开相邻的元素。</li>
+</ul>
+<p>css中的盒模型包括<code>IE盒模型</code>和<code>标准的W3C盒模型</code>。</p>
+<p>两者区别：</p>
+<p>在标准的盒模型中width指的content部分的宽度，在IE盒模型中，width表示content+左右padding+左右border这三部分的宽度，这使得在计算整个盒子宽度时存在差异。</p>
+<p>标准盒模型的盒子宽度 = 左右border+左右padding+width</p>
+<p>IE模型的盒子宽度 = width</p>
+<p>在CSS3中引入了box-sizing属性, 这个属性定义了浏览器应该如何计算一个元素的总宽度和总高度。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c">/* 表示标准盒模型 */</span>
+<span class="nt">box-sizing</span><span class="o">:</span> <span class="nt">content-box</span><span class="o">;</span> 
+<span class="c">/* 表示IE盒模型 */</span>
+<span class="nt">box-sizing</span><span class="o">:</span> <span class="nt">border-box</span><span class="o">;</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="flex">flex 布局</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flex 布局的基本概念</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex">flex 属性</a> 是 css 简写属性，用来设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。</p>
+<p>flex 属性是以下CSS属性的简写：</p>
+<ul>
+<li>flex-basis</li>
+<li>flex-grow</li>
+<li>flex-shrink</li>
+</ul>
+<h2 id="_3">响应式布局常用解决方案</h2>
+<p><a href="https://github.com/forthealllight/blog/issues/13">响应式布局的常用解决方案对比(媒体查询、百分比、rem和vw/vh）</a></p>
+<h2 id="_4">常见的浏览器内核</h2>
+<p>内核</p>
+<ul>
+<li>Trident：IE 浏览器内核；</li>
+<li>Gecko：Firefox 浏览器内核；</li>
+<li>Presto：Opera 浏览器内核；</li>
+<li>Webkit：Safari 浏览器内核；</li>
+<li>Blink：谷歌浏览器内核，属于 Webkit 的一个分支，与 Opera 一起在研发；</li>
+</ul>
+<p>浏览器</p>
+<ul>
+<li>IE：Trident，IE 内核；</li>
+<li>Chrome：以前是 Webkit，现在是 Blink 内核；</li>
+<li>Firefox：Gecko 内核；</li>
+<li>Safari：Webkit 内核；</li>
+<li>Opera：以前是 Presto，现在是 Blink 内核；</li>
+<li>360、猎豹浏览器内核：IE + Blink 双内核；</li>
+<li>搜狗、遨游、QQ 浏览器内核：Trident（兼容模式）+ Webkit（高速模式）；</li>
+<li>百度浏览器、世界之窗内核：IE 内核；</li>
+<li>2345 浏览器：以前是 IE 内核，现在是 IE + Blink 双内核；</li>
+<li>UC 浏览器内核：Webkit + Trident；</li>
+</ul>
+<h2 id="url">浏览器地址栏输入 URL 到页面展示到底发生了什么</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Performance/How_browsers_work">mdn 渲染页面：浏览器的工作原理</a></p>
+<p>用户在地址栏输入 URL 提交后会进行以下操作：</p>
+<ol>
+<li>DNS 查找，寻找页面资源的位置，拿到服务器的 IP 地址</li>
+<li>TCP 握手，一旦获取到服务器IP地址，浏览器就会通过TCP”三次握手“与服务器建立连接，让两端尝试进行通信</li>
+<li>TLS 协商，在进行真实的数据传输之前需要TLS协商，验证服务器，建立安全的连接</li>
+<li>发送请求，在建立安全连接后，浏览器就代表用户发送一个初始的HTTP GET请求</li>
+<li>解析数据<ul>
+<li>构建 DOM 树</li>
+<li>构建 CSSOM 树</li>
+<li>将 DOM 和 CSSOM 组合成一个 Render 树，Render 树保存所有具有内容和计算样式的可见节点</li>
+<li>构建渲染树后，开始布局，确定渲染树中所有节点的大小和位置</li>
+<li>将各个节点绘制到屏幕上</li>
+</ul>
+</li>
+</ol>
+<h2 id="bfc">说一下 BFC 及其应用</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context">mdn BFC</a></p>
+<p>BFC（Block Format Context）块级格式化上下文，是页面盒模型中的一种 CSS 渲染模式，相当于一个独立的容器，里面的元素和外部的元素相互不影响。</p>
+<p><strong>BFC 主要的作用</strong></p>
+<ul>
+<li>清除浮动，主要是为了解决，父元素因为子级元素浮动引起的内部高度为0的问题。</li>
+<li>防止同一 BFC 容器中的相邻元素间的外边距重叠问题</li>
+</ul>
+<p><strong>创建 BFC 的方式</strong></p>
+<ul>
+<li>根元素（<code>&lt;html&gt;</code>）</li>
+<li>浮动元素（元素的 float 不是 none）</li>
+<li>绝对定位元素（元素的 position 为 absolute 或 fixed）</li>
+<li>行内块元素（元素的 display 为 inline-block）</li>
+<li>表格单元格（元素的 display 为 table-cell，HTML表格单元格默认为该值）</li>
+<li>表格标题（元素的 display 为 table-caption，HTML表格标题默认为该值）</li>
+<li>匿名表格单元格元素（元素的 display 为 table、table-row、 table-row-group、table-header-group、table-footer-group（分别是HTML table、row、tbody、thead、tfoot 的默认属性）或 inline-table）</li>
+<li>overflow 计算值(Computed)不为 visible 的块元素</li>
+<li>display 值为 flow-root 的元素</li>
+<li>contain 值为 layout、content 或 paint 的元素</li>
+<li>弹性元素（display 为 flex 或 inline-flex 元素的直接子元素）</li>
+<li>网格元素（display 为 grid 或 inline-grid 元素的直接子元素）</li>
+<li>多列容器（元素的 column-count 或 column-width (en-US) 不为 auto，包括 column-count 为 1）</li>
+</ul>
+<h2 id="margin">如何避免两个元素的 margin 重叠</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">mdn 外边距重叠</a></p>
+<p>margin 是元素向外延伸的边距，只和自身有关。上下元素的下上外边距有时会重叠，实际空出的空间长度变为两外边距中的较长值。</p>
+<p>两个相邻 div 元素的 margin 值都设为20px，它们之间的间距是 20px，此时 margin 出现了重叠，如何避免这种情况？</p>
+<p>解决方法</p>
+<ul>
+<li>
+<p>设置后一个 div 样式</p>
+<ul>
+<li>display: inline-block</li>
+<li>display: table-caption</li>
+<li>float: left</li>
+<li>position: absolute</li>
+<li>position: fixed</li>
+</ul>
+</li>
+<li>
+<p>设置父元素样式</p>
+<ul>
+<li>display: grid</li>
+<li>display: inline-grid</li>
+<li>display: flex；flex-direction: column</li>
+</ul>
+</li>
+</ul>
+<h2 id="web">web 页面渲染事件 ✖️</h2>
+<h2 id="_5">说一下事件流</h2>
+<p>事件是用户或浏览器执行的某种动作，例如单击、鼠标滑过，响应某个事件的函数叫事件处理程序，或事件监听器。<br>
+JS 与 HTML 的交互是用事件实现的。事件流描述了页面接收事件的顺序。</p>
+<p>事件流包括三个阶段</p>
+<ol>
+<li>事件捕获阶段： 从上到下，层层传递，直到目标接收</li>
+<li>处于目标阶段： 确认目标，进行处理</li>
+<li>事件冒泡阶段： 处理完成，往上传递</li>
+</ol>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener">addEventListener</a> 方法可以指定事件处理程序的操作，这个方法接收以下参数：</p>
+<ol>
+<li>type：监听的事件类型， 例如click</li>
+<li>listener：处理事件的函数</li>
+<li>
+<p>options: 可选参数对象</p>
+<ol>
+<li>capture：boolean，true表示在捕获阶段调用处理函数，false表示在冒泡阶段调用，IE只支持事件冒泡</li>
+<li>once: boolean, 最多调用一次listener, 调用完后会自动移除</li>
+</ol>
+</li>
+<li>
+<p>useCapture: 可选，如果没有指定，useCapture 默认为 false 。 </p>
+</li>
+</ol>
+<h2 id="_6">说一下重绘和回流</h2>
+<p><strong>重绘</strong></p>
+<p>当页面元素样式改变不影响元素在文档流中的位置时（如background-color，border-color，visibility），浏览器只会将新样式赋予元素并进行重新绘制操作。</p>
+<p><strong>回流</strong></p>
+<p>当render tree中元素的尺寸、布局等改变时，浏览器重新渲染DOM的过程。回流也被称为重排，其实从字面上来看，重排更容易让人形象易懂（即重新排版整个页面）。</p>
+<h2 id="_7">什么情况下会触发重绘或重排，如何优化</h2>
+<p><strong>触发重绘</strong></p>
+<p>元素样式发生变化，比如 color, background等属性发生变化时会触发重绘。</p>
+<p><strong>触发回流</strong></p>
+<p>改变浏览器窗口的大小，使用一些JavaScript方法，包括计算样式，对DOM进行元素的添加或删除，或是改变元素的class等。回流必定会发生重绘，重绘不一定会引发回流。</p>
+<p>具体操作：</p>
+<ul>
+<li>添加或者删除可见的DOM元素；</li>
+<li>元素位置改变；</li>
+<li>元素尺寸改变——边距、填充、边框、宽度和高度；</li>
+<li>内容变化，比如用户在input框中输入文字，文本或者图片大小改变而引起的计算值宽度和高度改变；</li>
+<li>页面渲染初始化；</li>
+<li>浏览器窗口尺寸改变，resize事件发生时；</li>
+<li>计算offsetWidth和offsetHeight属性；</li>
+<li>设置style属性的值；</li>
+</ul>
+<p><strong>浏览器优化</strong></p>
+<p>现代浏览器大多是通过队列机制来批量更新布局，浏览器会把修改操作放在队列中，至少一个浏览器刷新（即16.6ms）才会清空队列，但当你获取布局信息的时候，队列中可能会有影响这些属性或方法返回值的操作，即使没有，浏览器也会强制清空队列，触发回流和重绘来确保返回正确的值。</p>
+<p>例如 offsetTop、clientTop、scrollTop、getComputedStyle()、width、height、getBoundingClientRect()，应避免频繁使用这些属性，他们都会强制渲染刷新队列。</p>
+<p><strong>减少重绘和回流</strong></p>
+<ol>
+<li>
+<p>CSS</p>
+<ul>
+<li>使用 transform 代替 top；</li>
+<li>使用 visibility 替换 display: none，前者引起重绘，后者引发回流；</li>
+<li>避免使用 table 布局；</li>
+<li>尽可能在 DOM 树的最末端改变 class；</li>
+<li>避免设置多层内联样式，CSS 选择符从右往左匹配查找，避免节点层级过多；</li>
+<li>将动画效果应用到 position 属性为 absolute 或 fixed 的元素上，避免影响其他元素的布局；</li>
+<li>避免使用 CSS 表达式，可能会引发回流；</li>
+<li>CSS 硬件加速；</li>
+</ul>
+</li>
+<li>
+<p>Javascript</p>
+<ul>
+<li>避免频繁操作样式，修改 class 最好；</li>
+<li>避免频繁操作 DOM，合并多次修改为一次；</li>
+<li>避免频繁读取会引发回流/重绘的属性，将结果缓存；</li>
+<li>对具有复杂动画的元素使用绝对定位，使它脱离文档流；</li>
+</ul>
+</li>
+</ol>
+<h2 id="_8">页面加载过程中会触发哪些事件 ❓</h2>
+<h2 id="seo">SEO</h2>
+<h2 id="web_1">常见的 web 性能方法有哪些</h2>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+      
+        
+        <a href="flex/" class="md-footer__link md-footer__link--next" aria-label="Next: Flex Layout" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Flex Layout
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand", "header.autohide", "content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.ecf98df9.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../extra/index.js"></script>
+      
+    
+  </body>
+</html>

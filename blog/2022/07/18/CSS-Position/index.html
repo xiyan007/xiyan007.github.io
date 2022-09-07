@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>CSS Position | Emily's Blog</title><meta name="keywords" content="CSS"><meta name="author" content="Emily"><meta name="copyright" content="Emily"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="默认文档流默认文档流 或者 正常文档流，normal flow， 是指在不改变元素的情况下，元素在文档中默认的布局方式（元素的框高、位置）。 网页文档中的元素是从上到下排列的，根据默认排列方式可以分为块级元素和内联元素。 块级元素  默认情况下，块级元素宽度占父元素宽度100%，块级元素高度由其内容填充。 可以通过设置width、height熟悉来设置内容区域展示大小， 即使设置了内容宽度，块级元">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS Position">
+<meta property="og:url" content="https://xiyan007.github.io/2022/07/18/CSS-Position/index.html">
+<meta property="og:site_name" content="Emily&#39;s Blog">
+<meta property="og:description" content="默认文档流默认文档流 或者 正常文档流，normal flow， 是指在不改变元素的情况下，元素在文档中默认的布局方式（元素的框高、位置）。 网页文档中的元素是从上到下排列的，根据默认排列方式可以分为块级元素和内联元素。 块级元素  默认情况下，块级元素宽度占父元素宽度100%，块级元素高度由其内容填充。 可以通过设置width、height熟悉来设置内容区域展示大小， 即使设置了内容宽度，块级元">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-07-18T06:39:05.000Z">
+<meta property="article:modified_time" content="2022-08-22T01:23:54.936Z">
+<meta property="article:author" content="Emily">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xiyan007.github.io/2022/07/18/CSS-Position/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'CSS Position',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-08-22 09:23:54'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script src="/blog/extra/less/less.js"></script><link rel="stylesheet" type="text/css" href="/blog/extra/less/index.css" /><meta name="generator" content="Hexo 5.4.2"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Emily's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">CSS Position</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-18 14:39:05" title="发表于 2022-07-18 14:39:05">2022-07-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-22 09:23:54" title="更新于 2022-08-22 09:23:54">2022-08-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">前端基础</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">851</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="CSS Position"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><article class="post-content" id="article-container"><h2 id="默认文档流"><a href="#默认文档流" class="headerlink" title="默认文档流"></a>默认文档流</h2><p>默认文档流 或者 正常文档流，normal flow， 是指在不改变元素的情况下，元素在文档中默认的布局方式（元素的框高、位置）。</p>
+<p>网页文档中的元素是从上到下排列的，根据默认排列方式可以分为<code>块级元素</code>和<code>内联元素</code>。</p>
+<p><strong>块级元素</strong></p>
+<ul>
+<li>默认情况下，块级元素宽度占父元素宽度100%，块级元素高度由其内容填充。</li>
+<li>可以通过设置width、height熟悉来设置内容区域展示大小， 即使设置了内容宽度，块级元素始终占据父元素一行位置。</li>
+<li>可以有效设置margin、padding属性值。</li>
+</ul>
+<p>常用的块级元素有：<code>div</code>，<code>p</code>，<code>ul</code>，<code>ol</code>，<code>li</code>，<code>section</code></p>
+<p><strong>内联元素</strong></p>
+<ul>
+<li>默认情况下，内联元素的宽高和其内容占据的宽高一致，不占据一行，多个元素可以同时排列在同一行。</li>
+<li>设置width、height属性值无效。</li>
+<li>margin属性值水平方向设置有效，垂直方向设置无效。</li>
+<li>可以有效设置padding属性值，设置垂直方式padding，会出现和其他元素重叠。</li>
+</ul>
+<p>常用的块级元素有：<code>span</code>，<code>a</code>，<code>i</code></p>
+<p><strong>块级元素和内联元素转换</strong></p>
+<p>可以通过设置display属性值为：<code>inline</code>、<code>inline-block</code>、<code>block</code>来切换元素展示方式。</br><br>设置为 <code>inline-block</code> 时，元素同时兼具块级元素和内联元素特性：多个元素可以同时排列在同一行，且可以有效设置 width、height、margin、padding属性值。</p>
+<h2 id="position-属性"><a href="#position-属性" class="headerlink" title="position 属性"></a>position 属性</h2><p>css 中的 position 属性用来指定元素在文档中的定位方式。在设置定位方式后，通过设置<code>top</code>、<code>right</code>、<code>bottom</code>、<code>left</code>属性值来设置偏移量，最终决定元素位置。</p>
+<p>语法：</p>
+<blockquote>
+<p>position: static | fixed | sticky | relative | absolute</p>
+</blockquote>
+<h3 id="static（默认定位）"><a href="#static（默认定位）" class="headerlink" title="static（默认定位）"></a>static（默认定位）</h3><p>元素使用正常（默认）的布局行为，此时 top、right、bottom、left 和 z-index 属性无效。</p>
+<h3 id="relative（相对自身定位）"><a href="#relative（相对自身定位）" class="headerlink" title="relative（相对自身定位）"></a>relative（相对自身定位）</h3><p>元素会先使用正常文档流进行定位。在设置元素偏移量后会相对自身位置进行偏移。</p>
+<h3 id="absolute（相对祖先定位）"><a href="#absolute（相对祖先定位）" class="headerlink" title="absolute（相对祖先定位）"></a>absolute（相对祖先定位）</h3><p>元素会被移出正常文档流，在设置元素偏移量后，元素会相对最近的非 <code>static</code> 祖先元素进行偏移，默认相对 html 元素定位。</p>
+<h3 id="fixed（相对视窗定位）"><a href="#fixed（相对视窗定位）" class="headerlink" title="fixed（相对视窗定位）"></a>fixed（相对视窗定位）</h3><p>元素会被移出正常文档流，在设置元素偏移量后，元素会相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。</p>
+<p><strong>当元素祖先的 <code>transform</code>, <code>perspective</code> 或 <code>filter</code> 属性非 none 时，容器由视口改为该祖先。</strong></p>
+<h3 id="sticky"><a href="#sticky" class="headerlink" title="sticky"></a>sticky</h3><p>该值总是创建一个新的层叠上下文（stacking context）。</p>
+<p>元素使用正常文档流进行定位，会保留在正常文档流中占据的空间。在设置元素偏移量后，会相对它的<strong>最近滚动祖先元素</strong>或<strong>最近块级元素</strong>进行偏移。偏移值不会影响任何其他元素的位置。该元素会固定在祖先元素上。</p>
+<p>当祖先元素的 overflow 为 hidden，scroll，auto 或 overlay 时，可以抑制 sticky 行为。</p>
+<h2 id="定位类型"><a href="#定位类型" class="headerlink" title="定位类型"></a>定位类型</h2><ul>
+<li>相对定位：position 属性值为 relative 的元素。</li>
+<li>绝对定位：position 属性值为 absolute 和 fixed 的元素。</li>
+<li>粘性定位：position 属性值为 sticky 的元素。</li>
+</ul>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position">MDN - CSS Position</a></p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CSS/">CSS</a></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/07/19/JS-%E8%8E%B7%E5%8F%96%E5%9B%BE%E7%89%87%E3%80%81%E8%A7%86%E9%A2%91%E5%B0%BA%E5%AF%B8%E5%A4%A7%E5%B0%8F/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">JS 获取图片、视频尺寸大小</div></div></a></div><div class="next-post pull-right"><a href="/2022/05/24/CSS-%E5%BD%A2%E7%8A%B6%E7%BB%98%E5%88%B6/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">CSS 形状绘制</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/05/24/CSS-%E5%BD%A2%E7%8A%B6%E7%BB%98%E5%88%B6/" title="CSS 形状绘制"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-24</div><div class="title">CSS 形状绘制</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Emily</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E6%96%87%E6%A1%A3%E6%B5%81"><span class="toc-number">1.</span> <span class="toc-text">默认文档流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#position-%E5%B1%9E%E6%80%A7"><span class="toc-number">2.</span> <span class="toc-text">position 属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#static%EF%BC%88%E9%BB%98%E8%AE%A4%E5%AE%9A%E4%BD%8D%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">static（默认定位）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#relative%EF%BC%88%E7%9B%B8%E5%AF%B9%E8%87%AA%E8%BA%AB%E5%AE%9A%E4%BD%8D%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">relative（相对自身定位）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#absolute%EF%BC%88%E7%9B%B8%E5%AF%B9%E7%A5%96%E5%85%88%E5%AE%9A%E4%BD%8D%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">absolute（相对祖先定位）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fixed%EF%BC%88%E7%9B%B8%E5%AF%B9%E8%A7%86%E7%AA%97%E5%AE%9A%E4%BD%8D%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">fixed（相对视窗定位）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sticky"><span class="toc-number">2.5.</span> <span class="toc-text">sticky</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%BD%8D%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text">定位类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3"><span class="toc-number">4.</span> <span class="toc-text">参考文档</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/08/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E6%93%8D%E4%BD%9C/" title="Git 常用命令和操作">Git 常用命令和操作</a><time datetime="2022-09-07T02:55:16.032Z" title="更新于 2022-09-07 10:55:16">2022-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/09/05/CodePush-React-Native-App/" title="CodePush: React Native App">CodePush: React Native App</a><time datetime="2022-09-06T12:33:25.172Z" title="更新于 2022-09-06 20:33:25">2022-09-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/08/03/Vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Vue 学习笔记">Vue 学习笔记</a><time datetime="2022-09-06T12:16:25.190Z" title="更新于 2022-09-06 20:16:25">2022-09-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/07/27/JS-%E7%AE%97%E6%B3%95/" title="JS 算法">JS 算法</a><time datetime="2022-09-06T12:16:16.758Z" title="更新于 2022-09-06 20:16:16">2022-09-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/07/19/JS-%E8%8E%B7%E5%8F%96%E5%9B%BE%E7%89%87%E3%80%81%E8%A7%86%E9%A2%91%E5%B0%BA%E5%AF%B8%E5%A4%A7%E5%B0%8F/" title="JS 获取图片、视频尺寸大小">JS 获取图片、视频尺寸大小</a><time datetime="2022-09-06T12:16:05.633Z" title="更新于 2022-09-06 20:16:05">2022-09-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

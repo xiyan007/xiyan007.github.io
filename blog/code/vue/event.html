@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event</title>
+    <style>
+      .parent {
+        width: 200px;
+        height: 60px;
+        background-color: pink;
+        margin-top: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <button @click="clear">clear</button>
+      <div class="parent" v-on:click="clickParent">
+        <button @click="click('button A')">button A</button>
+        <button @click.prevent="click('button B')">button B</button>
+      </div>
+      <div>{{msgA}}</div>
+      <div>{{msgB}}</div>
+    </div>
+
+    <script src="/blog/resources/lib/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: '.box',
+        data: {
+          msgA: '',
+          msgB: '',
+        },
+        methods: {
+          clear() {
+            this.msgA = ''
+            this.msgB = ''
+          },
+          clickParent() {
+            this.msgA = 'parent'
+          },
+          click(v) {
+            this.msgB = v
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

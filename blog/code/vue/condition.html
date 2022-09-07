@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>condition</title>
+  </head>
+  <body>
+    <div class="box">
+      <button @click="activeKey = 0">btn1</button>
+      <button @click="activeKey = 1">btn2</button>
+      <button @click="activeKey = 2">btn3</button>
+      <div v-if="activeKey == 0">hello</div>
+      <div v-else-if="activeKey == 1">world</div>
+      <div v-else>Vue</div>
+    </div>
+
+    <script src="/blog/resources/lib/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: '.box',
+        data: {
+          activeKey: 0,
+        },
+      });
+    </script>
+  </body>
+</html>

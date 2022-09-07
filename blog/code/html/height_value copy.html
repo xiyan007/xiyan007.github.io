@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>height 最小属性值</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="line-box">
+        <div class="type">1px</div>
+        <div class="line1"></div>
+      </div>
+      <div class="line-box">
+        <div class="type">0.5px</div>
+        <div class="line2"></div>
+      </div>
+      <div class="line-box">
+        <div class="type">0.2584px</div>
+        <div class="firefox_1"></div>
+      </div>
+      <div class="line-box">
+        <div class="type">0.2583px</div>
+        <div class="firefox_2"></div>
+      </div>
+      <div class="line-box">
+        <div class="type">0.249999993px</div>
+        <div class="safari_1"></div>
+      </div>
+      <div class="line-box">
+        <div class="type">0.249999992px</div>
+        <div class="safari_2"></div>
+      </div>
+      <div class="line-box">
+        <div class="type">0.1px</div>
+        <div class="line3"></div>
+      </div>
+      <div class="line-box">
+        <div class="type">0.05px</div>
+        <div class="line4"></div>
+      </div>
+      <div class="line-box">
+        <div class="type">0.04px</div>
+        <div class="line5"></div>
+      </div>
+      <div class="line-box">
+        <div class="type">0.0390625px</div>
+        <div class="chrome_1"></div>
+      </div>
+      <div class="line-box">
+        <div class="type">0.0390624px</div>
+        <div class="chrome_2"></div>
+      </div>
+      
+    </div>
+    <style>
+      html,body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        padding: 20px;
+      }
+      .line-box {
+        height: 24px;
+        line-height: 24px;
+      }
+      .line-box div {
+        display: inline-block;
+      }
+      .line-box > div:first-child {
+        width: 100px;
+        font-size: 12px;
+        text-align: right;
+      }
+      .line-box > div:last-child {
+        width: 200px;
+        background: red;
+      }
+      .line1 {
+        height: 1px;
+      }
+      .line2 {
+        height: 0.5px;  /* 浏览器无缩放，肉眼可以看出比 1px 要细 */
+      }
+      .line3 {
+        height: 0.1px;  /* 浏览器无缩放，肉眼看上去和 0.5px 一样 */
+      }
+      .line4 {
+        height: 0.05px;
+      }
+      .line5 {
+        height: 0.04px; /* 浏览器无缩放，肉眼看上去和 0.1px 一样 */
+      }
+      .firefox_1 {
+        height: 0.2584px; /* 显示 */
+      }
+      .firefox_2 {
+        height: 0.2583px; /* 不显示 */
+      }
+      .chrome_1 {
+        height: 0.0390625px; /* 显示 */
+      }
+      .chrome_2 {
+        height: 0.0390624px; /* 不显示 */
+      }
+      .safari_1 {
+        height: 0.249999993px; /* 显示 */
+      }
+      .safari_2 {
+        height: 0.249999992px; /* 不显示 */
+      }
+    </style>
+  </body>
+</html>

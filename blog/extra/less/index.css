@@ -1,0 +1,91 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+html ul {
+  margin: 10px 0;
+  padding-left: 2rem;
+}
+html h2 {
+  font-size: 1.5rem;
+}
+html h3 {
+  font-size: 1.17rem;
+}
+html h4 {
+  font-size: 1.1rem;
+}
+html p > img {
+  max-width: 80% !important;
+  max-height: 300px;
+}
+html[data-theme='light'] #pagination.pagination-post {
+  background-color: #858585;
+}
+html #nav .site-page::after {
+  display: none;
+}
+html #pagination .prev-post a,
+html #pagination .next-post a {
+  height: 100px;
+}
+html .relatedPosts > .relatedPosts-list > div {
+  height: 100px;
+  background-color: #858585;
+}
+html .layout {
+  max-width: 1400px;
+  padding: 1.35rem 1.1rem;
+}
+html .layout > div:first-child:not(.recent-posts) {
+  padding: 1rem 2.5rem;
+}
+html #recent-posts > .recent-post-item {
+  height: 13rem;
+}
+html #aside-content {
+  width: 28%;
+}
+@media screen and (max-width: 900px) {
+  html #aside-content {
+    width: 100%;
+  }
+}
+html #rightside_config {
+  display: none !important;
+}
+html #article-container code {
+  padding: 3px 5px;
+}
+html #article-container figure.highlight {
+  box-shadow: none;
+}
+html #archive .article-sort-item {
+  margin-bottom: 1em;
+}
+html #archive .article-sort-item .article-sort-item-img {
+  height: 30px;
+}
+html #archive .article-sort-item .article-sort-item-time {
+  line-height: 1.6;
+}
+iframe {
+  width: 100%;
+  background-color: rgba(252, 243, 232, 0.657);
+  border: none;
+}
+table thead tr th {
+  white-space: nowrap;
+}
+.btn {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border-radius: 0.375rem;
+  color: #fff;
+}
+.btn-primary {
+  background-color: #1e73f2;
+}

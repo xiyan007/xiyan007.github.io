@@ -16,9 +16,9 @@ html h3 {
 html h4 {
   font-size: 1.1rem;
 }
-html p > img {
-  max-width: 80% !important;
-  max-height: 300px;
+html b,
+html strong {
+  font-size: 1.05em;
 }
 html[data-theme='light'] #pagination.pagination-post {
   background-color: #858585;
@@ -30,7 +30,7 @@ html #pagination .prev-post a,
 html #pagination .next-post a {
   height: 100px;
 }
-html .relatedPosts > .relatedPosts-list > div {
+html .relatedPosts &gt; .relatedPosts-list &gt; div {
   height: 100px;
   background-color: #858585;
 }
@@ -38,10 +38,10 @@ html .layout {
   max-width: 1400px;
   padding: 1.35rem 1.1rem;
 }
-html .layout > div:first-child:not(.recent-posts) {
+html .layout &gt; div:first-child:not(.recent-posts) {
   padding: 1rem 2.5rem;
 }
-html #recent-posts > .recent-post-item {
+html #recent-posts &gt; .recent-post-item {
   height: 13rem;
 }
 html #aside-content {
@@ -54,6 +54,10 @@ html #aside-content {
 }
 html #rightside_config {
   display: none !important;
+}
+html #article-container img {
+  max-height: 300px;
+  margin: 0;
 }
 html #article-container code {
   padding: 3px 5px;

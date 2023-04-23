@@ -176,6 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (isPrismjs) {
         $figureHighlight.forEach(function (item) {
           const langName = item.getAttribute('data-language') ? item.getAttribute('data-language') : 'Code'
+          console.log('langName', langName);
           const highlightLangEle = `<div class="code-lang">${langName}</div>`
           btf.wrap(item, 'figure', { class: 'highlight' })
           createEle(highlightLangEle, item)

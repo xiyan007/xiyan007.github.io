@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background-clip</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box {
+        font-size: 20px;
+        font-weight: bolder;
+        width: 100px;
+        height: 100px;
+        border: 20px solid rgba(22, 32, 174, 0.341);
+        padding: 20px;
+        margin: 5px;
+        background-image: url(/blog/resources/img/test.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .box1 {
+        background-clip: border-box;
+        -webkit-background-clip: border-box;
+      }
+      .box2 {
+        background-clip: padding-box;
+        -webkit-background-clip: padding-box;
+      }
+      .box3 {
+        background-clip: content-box;
+        -webkit-background-clip: content-box;
+      }
+      .box4 {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box">default</div>
+      <div class="box box1">border-box</div>
+      <div class="box box2">padding-box</div>
+      <div class="box box3">content-box</div>
+      <div class="box box4">text</div>
+    </div>
+  </body>
+</html>

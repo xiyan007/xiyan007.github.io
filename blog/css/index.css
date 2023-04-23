@@ -1732,7 +1732,7 @@ figure.highlight pre .javascript .function {
   border: none;
 }
 #article-container figure.highlight {
-  margin: 0 0 24px;
+  margin: 10px 0 24px;
   border-radius: 7px;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
@@ -2350,7 +2350,7 @@ figure.highlight pre .javascript .function {
   -webkit-align-items: center;
   align-items: center;
   overflow: hidden;
-  height: 18em;
+  height: 12em;
 }
 @media screen and (max-width: 768px) {
   #recent-posts > .recent-post-item {
@@ -2404,7 +2404,7 @@ figure.highlight pre .javascript .function {
   }
 }
 #recent-posts > .recent-post-item >.recent-post-info {
-  padding: 0 40px;
+  padding: 0 28px;
   width: 57%;
 }
 @media screen and (max-width: 768px) {
@@ -2531,7 +2531,7 @@ h1.page-title + .tag-cloud-list {
   position: relative;
   overflow: hidden;
   margin-top: 20px;
-  padding: 20px 24px;
+  padding: 16px 20px;
 }
 #aside-content .card-info .author-info__name {
   font-weight: 500;
@@ -2664,6 +2664,24 @@ h1.page-title + .tag-cloud-list {
   flex: 1;
   padding-left: 10px;
   word-break: break-all;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 #aside-content .aside-list > .aside-list-item .content > .name {
   -webkit-line-clamp: 1;
@@ -2679,14 +2697,22 @@ h1.page-title + .tag-cloud-list {
   color: var(--font-color);
   font-size: 95%;
   line-height: 1.5;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
+  margin-right: 8px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 #aside-content .aside-list > .aside-list-item .content > .title:hover,
 #aside-content .aside-list > .aside-list-item .content > .comment:hover {
   color: #428bca;
 }
 #aside-content .aside-list > .aside-list-item.no-cover {
-  min-height: 4.4em;
+  min-height: 2.4em;
 }
 #aside-content .card-archives ul.card-archive-list,
 #aside-content .card-categories ul.card-category-list {
@@ -2718,8 +2744,8 @@ h1.page-title + .tag-cloud-list {
 }
 #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a:hover,
 #aside-content .card-categories ul.card-category-list > .card-category-list-item a:hover {
-  padding: 3px 17px;
-  background-color: var(--text-bg-hover);
+  background-color: #eee;
+  border-radius: 2px;
 }
 #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a span:first-child,
 #aside-content .card-categories ul.card-category-list > .card-category-list-item a span:first-child {
@@ -2916,13 +2942,6 @@ h1.page-title + .tag-cloud-list {
   -ms-transition: filter 375ms ease-in 0.2s, -ms-transform 0.3s;
   transition: filter 375ms ease-in 0.2s, transform 0.3s;
   object-fit: cover;
-}
-.avatar-img img:hover {
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  transform: rotate(360deg);
 }
 @media screen and (min-width: 900px) {
   html.hide-aside .layout {
@@ -3742,13 +3761,13 @@ h1.page-title + .tag-cloud-list {
   position: relative;
   display: block;
   overflow: hidden;
-  height: 150px;
+  height: 100px;
 }
 #pagination.pagination-post {
   overflow: hidden;
   margin-top: 40px;
   width: 100%;
-  background: #000;
+  background: #858585;
 }
 .layout > .recent-posts .pagination > * {
   display: inline-block;
@@ -3943,8 +3962,8 @@ h1.page-title + .tag-cloud-list {
   overflow: hidden;
   margin: 3px;
   width: calc(33.333% - 6px);
-  height: 200px;
-  background: #000;
+  height: 90px;
+  background: #858585;
   vertical-align: bottom;
 }
 @media screen and (max-width: 768px) {

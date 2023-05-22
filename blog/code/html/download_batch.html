@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>download batch</title>
+  </head>
+  <body>
+    <button style="width: 120px; height: 40px" onclick="download()">
+      下载多个文件
+    </button>
+    <script>
+      function downloadFile(url) {
+        if (url.indexOf('.pdf') !== -1) {
+          const a = document.createElement('a');
+          a.target = '_blank';
+          a.href = url;
+          // a.download = 'xxx' + new Date().getTime();
+          a.click();
+        } else {
+          const iframe = document.createElement('iframe');
+          iframe.style.display = 'none'; // 防止影响页面
+          iframe.style.height = 0; // 防止影响页面
+          iframe.src = url;
+          document.body.appendChild(iframe); // 这一行必须，iframe挂在到dom树上才会发请求
+          // 5分钟之后删除（onload方法对于下载链接不起作用，就先抠脚一下吧）
+          setTimeout(() => {
+            iframe.remove();
+          }, 5 * 60 * 1000);
+        }
+      }
+      function download() {
+        const urlList = [
+          // 'https://dhstatic.bthome.com/test/web/activites/aaa.xlsx',
+          // 'https://dhstatic.bthome.com/test/web/activites/bbb.xlsx',
+          'https://bucket-bnq-app.oss-cn-hangzhou.aliyuncs.com/gdps/test/CI23042300001_1481_changeContract.pdf',
+          'https://bucket-bnq-app.oss-cn-hangzhou.aliyuncs.com/gdps/test/1682255770981873.xlsx',
+        ];
+        for (let i = 0; i < urlList.length; i++) {
+          this.downloadFile(urlList[i]);
+        }
+      }
+    </script>
+  </body>
+</html>

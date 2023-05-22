@@ -5615,10 +5615,11 @@ blockquote.pullquote.right {
   z-index: 1001;
   display: none;
   margin-left: -300px;
-  padding: 20px;
+  padding: 24px;
   width: 600px;
   border-radius: 8px;
   background: var(--search-bg);
+  min-height: 160px;
 }
 @media screen and (max-width: 768px) {
   .search-dialog {
@@ -5634,8 +5635,8 @@ blockquote.pullquote.right {
   margin: 20px auto;
 }
 .search-dialog .search-nav {
-  margin: 0 0 14px;
-  color: #428bca;
+  margin: 0 0 24px;
+  color: $font-dark;
   font-size: 1.4em;
   line-height: 1;
 }
@@ -5665,21 +5666,27 @@ blockquote.pullquote.right {
   background: rgba(0,0,0,0.6);
 }
 #local-search .search-dialog .local-search-box {
-  margin: 0 auto;
+  margin: 24px auto;
   max-width: 100%;
   width: 100%;
 }
 #local-search .search-dialog .local-search-box input {
-  padding: 5px 14px;
+  padding: 10px 14px;
   width: 100%;
   outline: none;
   border: 2px solid #428bca;
-  border-radius: 40px;
+  border-radius: 6px;
   background: var(--search-bg);
   color: var(--search-input-color);
   -webkit-appearance: none;
 }
+#local-search .search-dialog .local-search-box input::placeholder {
+  color: #858585;
+}
 #local-search .search-dialog .search-wrap {
+  display: none;
+}
+#local-search .search-dialog .search-wrap hr {
   display: none;
 }
 #local-search .search-dialog .local-search__hit-item {
@@ -5726,7 +5733,7 @@ blockquote.pullquote.right {
 }
 #local-search .search-dialog .search-result-list {
   overflow-y: auto;
-  max-height: 210px;
+  max-height: 500px;
 }
 @media screen and (max-width: 768px) {
   #local-search .search-dialog .search-result-list {
